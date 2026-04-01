@@ -186,6 +186,17 @@ export default async function ProgramDetailPage({ params }: Props) {
           <p className="text-sm text-black/60 whitespace-pre-wrap mt-1">
             {venue.address}
           </p>
+          <div className="aspect-[16/9] rounded-lg overflow-hidden mt-4">
+            <iframe
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(venue.id === "gcc" ? "東京都新宿区戸塚町1丁目103-18" : venue.name)}&output=embed&hl=ja`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title={venue.name}
+            />
+          </div>
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.id === "gcc" ? "東京都新宿区戸塚町1丁目103-18" : venue.name)}`}
             target="_blank"
