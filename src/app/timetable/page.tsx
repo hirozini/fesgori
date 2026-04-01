@@ -55,51 +55,46 @@ export default function TimetablePage() {
                 {timeGroups.map((group) => {
                   const isOverlap = group.events.length > 1;
                   return (
-                    <div key={group.time} className="flex gap-3 items-start">
-                      {/* Time column */}
-                      <div className="w-16 shrink-0 pt-3">
-                        <span className="text-base font-bold leading-none">{group.time}</span>
-                      </div>
-
-                      {/* Events */}
-                      <div
-                        className={`flex-1 ${
-                          isOverlap
-                            ? "grid grid-cols-1 sm:grid-cols-2 gap-2"
-                            : ""
-                        }`}
-                      >
-                        {group.events.map((ev, i) => {
-                          const perf = performances.find(
-                            (p) => p.id === ev.performanceId
-                          );
-                          return (
-                            <Link
-                              key={i}
-                              href={`/program/${ev.performanceId}`}
-                              className={`block p-3 rounded-lg border-2 transition-colors ${
-                                colorMap[ev.performanceId] ||
-                                "bg-gray-100 border-gray-300"
-                              } ${isOverlap ? "relative" : ""}`}
-                            >
-                              {isOverlap && (
-                                <span className="absolute top-1 right-2 text-[10px] text-black/30 font-medium">
-                                  同時刻
-                                </span>
-                              )}
-                              <p className="font-bold text-sm">{ev.label}</p>
-                              <p className="text-xs text-black/50 mt-1">
-                                {ev.venue}・{ev.duration}分
-                              </p>
-                              {"note" in ev && ev.note && (
-                                <p className="text-xs text-black/40 mt-0.5">
-                                  {ev.note}
-                                </p>
-                              )}
-                            </Link>
-                          );
-                        })}
-                      </div>
+                    <div
+                      key={group.time}
+                      className={
+                        isOverlap
+                          ? "grid grid-cols-1 sm:grid-cols-2 gap-2"
+                          : ""
+                      }
+                    >
+                      {group.events.map((ev, i) => (
+                        <Link
+                          key={i}
+                          href={`/program/${ev.performanceId}`}
+                          className={`block p-3 rounded-lg border-2 transition-colors ${
+                            colorMap[ev.performanceId] ||
+                            "bg-gray-100 border-gray-300"
+                          } ${isOverlap ? "relative" : ""}`}
+                        >
+                          <div className="flex items-baseline gap-3">
+                            <span className="text-base font-bold shrink-0">
+                              {ev.time}
+                            </span>
+                            <span className="font-bold text-sm">
+                              {ev.label}
+                            </span>
+                            {isOverlap && (
+                              <span className="text-[10px] text-black/30 font-medium ml-auto">
+                                同時刻
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-xs text-black/50 mt-1 ml-[3.8rem]">
+                            {ev.venue}・{ev.duration}分
+                          </p>
+                          {"note" in ev && ev.note && (
+                            <p className="text-xs text-black/40 mt-0.5 ml-[3.8rem]">
+                              {ev.note}
+                            </p>
+                          )}
+                        </Link>
+                      ))}
                     </div>
                   );
                 })}
