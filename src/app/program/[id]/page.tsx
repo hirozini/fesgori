@@ -204,14 +204,15 @@ export default async function ProgramDetailPage({ params }: Props) {
           <p className="text-sm text-black/60 whitespace-pre-wrap mt-1">
             {venue.address}
           </p>
-          <div className="aspect-[16/9] rounded-lg overflow-hidden mt-4">
+          <div className="rounded-lg overflow-hidden mt-4 w-full" style={{ height: "300px" }}>
             <iframe
-              src={`https://maps.google.com/maps?q=${encodeURIComponent(venue.id === "gcc" ? "東京都新宿区戸塚町1丁目103-18" : venue.name)}&output=embed&hl=ja`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(venue.id === "gcc" ? "東京都新宿区戸塚町1丁目103-18" : venue.name)}&output=embed&hl=ja&z=16`}
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               title={venue.name}
             />
           </div>
