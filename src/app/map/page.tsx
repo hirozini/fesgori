@@ -15,7 +15,7 @@ export default function MapPage() {
       </h1>
 
       {/* Google My Maps embed */}
-      <div className="aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden mb-10">
+      <div className="aspect-[3/4] md:aspect-[21/9] rounded-lg overflow-hidden mb-10">
         <iframe
           src="https://www.google.com/maps/d/u/0/embed?mid=1cc_iaJCZ9GrSmi96uDbTvcHkfE8D9r4&ehbc=2E312F"
           width="100%"
