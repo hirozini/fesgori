@@ -23,7 +23,7 @@ export default function Home() {
           width={600}
           height={900}
           className="md:hidden w-full h-auto object-contain flex-shrink"
-          style={{ maxHeight: "calc(100vh - 12rem)" }}
+          style={{ maxHeight: "calc(100vh - 3.5rem)" }}
           priority
         />
         <Image
