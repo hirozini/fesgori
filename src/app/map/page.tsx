@@ -1,28 +1,27 @@
 import { venues, performances } from "@/lib/festival";
+import { VenueMap } from "@/components/VenueMap";
 import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "MAP — フェスティバルご理解ありがとうございます",
+  title: "ACCESS — フェスティバルご理解ありがとうございます",
 };
+
 export default function MapPage() {
   const center = { lat: 35.708, lng: 139.718 };
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-black mb-10">
-        <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md -rotate-2 border-2 border-black">会場マップ</span>
+        <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md -rotate-2 border-2 border-black">
+          会場マップ
+        </span>
       </h1>
-      {/* Google Maps embed */}
+
+      {/* Map with pins */}
       <div className="aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden mb-10">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3239.5!2d139.718!3d35.708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="会場マップ"
-        />
+        <VenueMap venues={venues} center={center} />
       </div>
+
       {/* Venue cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {venues.map((venue) => {
@@ -31,9 +30,7 @@ export default function MapPage() {
           );
           return (
             <div key={venue.id} className="bg-white rounded-lg p-6 shadow-sm">
-              <h2 className="text-lg font-bold mb-2">
-                {venue.name}
-              </h2>
+              <h2 className="text-lg font-bold mb-2">{venue.name}</h2>
               <p className="text-sm text-black/60 whitespace-pre-wrap">
                 {venue.address}
               </p>
