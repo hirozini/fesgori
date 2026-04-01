@@ -3,11 +3,15 @@ import type { Performance } from "@/lib/festival";
 import { getVenue } from "@/lib/festival";
 import { FallbackImage } from "./FallbackImage";
 
+const tilts = ["rotate-1", "-rotate-1", "rotate-2", "-rotate-2", "rotate-1", "-rotate-1", "rotate-2"];
+
 type Props = {
   performance: Performance;
+  index?: number;
 };
 
-export function PerformanceCard({ performance }: Props) {
+export function PerformanceCard({ performance, index = 0 }: Props) {
+  const tilt = tilts[index % tilts.length];
   const venue = getVenue(performance.venueId);
   const imageSrc =
     performance.image || `/images/programs/${performance.id}.jpg`;
@@ -15,7 +19,7 @@ export function PerformanceCard({ performance }: Props) {
   return (
     <Link
       href={`/program/${performance.id}`}
-      className="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${tilt} hover:rotate-0`}
     >
       <div className="aspect-[4/3] relative bg-black/5 overflow-hidden">
         <FallbackImage

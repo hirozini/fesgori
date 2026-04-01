@@ -45,7 +45,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {performances.map((p, i) => (
             <FadeIn key={p.id} delay={i * 80}>
-              <PerformanceCard performance={p} />
+              <PerformanceCard performance={p} index={i} />
             </FadeIn>
           ))}
         </div>

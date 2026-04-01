@@ -17,7 +17,7 @@ export default function TimetablePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-black mb-10">
-        タイムテーブル
+        <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md rotate-2 border-2 border-black">タイムテーブル</span>
       </h1>
       {/* Desktop: grid table */}
       <div className="hidden md:block overflow-x-auto mb-12">

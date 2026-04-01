@@ -8,7 +8,7 @@ export default function MapPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-black mb-10">
-        会場マップ
+        <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md -rotate-2 border-2 border-black">会場マップ</span>
       </h1>
       {/* Google Maps embed */}
       <div className="aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden mb-10">
