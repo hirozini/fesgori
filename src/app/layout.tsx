@@ -71,7 +71,6 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer>
-          <div className="h-2 bg-yellow" />
           <div className="bg-black text-white py-12">
             <div className="max-w-6xl mx-auto px-4 space-y-6">
               <p className="text-lg font-bold text-yellow">{festival.name}</p>

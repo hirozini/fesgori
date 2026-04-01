@@ -1,5 +1,6 @@
 import { performances } from "@/lib/festival";
 import { PerformanceCard } from "@/components/PerformanceCard";
+import { FadeIn } from "@/components/FadeIn";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export default function ProgramPage() {
         公演一覧
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {performances.map((p) => (
-          <PerformanceCard key={p.id} performance={p} />
+        {performances.map((p, i) => (
+          <FadeIn key={p.id} delay={i * 80}>
+            <PerformanceCard performance={p} />
+          </FadeIn>
         ))}
       </div>
     </div>

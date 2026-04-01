@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { festival, performances } from "@/lib/festival";
 import { PerformanceCard } from "@/components/PerformanceCard";
+import { FadeIn } from "@/components/FadeIn";
 
 export default function Home() {
   return (
@@ -30,8 +31,10 @@ export default function Home() {
           公演一覧
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {performances.map((p) => (
-            <PerformanceCard key={p.id} performance={p} />
+          {performances.map((p, i) => (
+            <FadeIn key={p.id} delay={i * 80}>
+              <PerformanceCard performance={p} />
+            </FadeIn>
           ))}
         </div>
       </section>
