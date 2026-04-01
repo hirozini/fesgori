@@ -163,7 +163,7 @@ export default async function ProgramDetailPage({ params }: Props) {
             {venue.address}
           </p>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.name)}`}
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.id === "gcc" ? "東京都新宿区戸塚町1丁目103-18" : venue.name)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-3 text-sm underline text-black/60 hover:text-black"
