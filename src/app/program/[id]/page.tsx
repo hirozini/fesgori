@@ -55,6 +55,24 @@ export default async function ProgramDetailPage({ params }: Props) {
         <p className="text-lg text-black/70 font-medium">{p.catchcopy}</p>
       </div>
 
+      {/* Co-performance link */}
+      {p.id === "tsubure" && (
+        <Link
+          href="/program/sakai"
+          className="block w-fit mb-3 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
+        >
+          同時上演「埒外の女」→
+        </Link>
+      )}
+      {p.id === "sakai" && (
+        <Link
+          href="/program/tsubure"
+          className="block w-fit mb-3 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
+        >
+          同時上演「ウィシュマ裁き」→
+        </Link>
+      )}
+
       {/* Reservation button */}
       {p.quartetUrl ? (
         <a
@@ -66,27 +84,9 @@ export default async function ProgramDetailPage({ params }: Props) {
           予約する
         </a>
       ) : (
-        <p className={`inline-block bg-black/10 text-black/40 px-10 py-4 text-base font-bold rounded ${p.id === "tsubure" || p.id === "sakai" ? "mb-3" : "mb-10"}`}>
+        <p className="inline-block bg-black/10 text-black/40 px-10 py-4 text-base font-bold rounded mb-10">
           予約準備中
         </p>
-      )}
-
-      {/* Co-performance link */}
-      {p.id === "tsubure" && (
-        <Link
-          href="/program/sakai"
-          className="block w-fit mb-10 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
-        >
-          同時上演「埒外の女」→
-        </Link>
-      )}
-      {p.id === "sakai" && (
-        <Link
-          href="/program/tsubure"
-          className="block w-fit mb-10 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
-        >
-          同時上演「ウィシュマ裁き」→
-        </Link>
       )}
 
       {/* Description */}
