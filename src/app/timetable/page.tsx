@@ -57,8 +57,8 @@ export default function TimetablePage() {
                   return (
                     <div key={group.time} className="flex gap-3 items-start">
                       {/* Time column */}
-                      <div className="w-16 shrink-0 py-3">
-                        <span className="text-sm font-bold leading-none">{group.time}</span>
+                      <div className="w-16 shrink-0 p-3">
+                        <span className="text-base font-bold leading-none">{group.time}</span>
                       </div>
 
                       {/* Events */}
