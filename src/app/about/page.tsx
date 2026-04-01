@@ -74,6 +74,10 @@ export default function AboutPage() {
               <dt className="text-black/50 min-w-[5em]">企画協力</dt>
               <dd>{festival.credit.planningCooperation}</dd>
             </div>
+            <div className="flex gap-4">
+              <dt className="text-black/50 min-w-[5em]">漫画</dt>
+              <dd>八津田茂「近所のボランティアの中学生」</dd>
+            </div>
           </dl>
         </section>
         {/* Lynch link */}
