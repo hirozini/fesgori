@@ -25,11 +25,11 @@ export default function Home() {
       </div>
 
       {/* Performances */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-2xl font-bold mb-8">
+      <section className="max-w-5xl mx-auto px-6 md:px-10 py-24">
+        <h2 className="text-2xl font-bold mb-14">
           公演一覧
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {performances.map((p) => (
             <PerformanceCard key={p.id} performance={p} />
           ))}
@@ -37,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* Notice bar */}
-      <section className="bg-black/5 py-6 px-4">
+      <section className="bg-black/5 py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm font-medium text-black/70">
             {festival.generalNotes}

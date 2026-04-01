@@ -32,7 +32,7 @@ export default async function ProgramDetailPage({ params }: Props) {
   const profileImageSrc = p.profileImage || `/images/profiles/${p.id}.jpg`;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <div className="max-w-3xl mx-auto px-6 md:px-10 py-20">
       {/* Main image */}
       <div className="aspect-[16/9] relative bg-black/5 rounded-lg overflow-hidden mb-8">
         <FallbackImage
@@ -46,7 +46,7 @@ export default async function ProgramDetailPage({ params }: Props) {
       </div>
 
       {/* Header */}
-      <div className="space-y-3 mb-8">
+      <div className="space-y-4 mb-12">
         <p className="text-sm text-black/50 font-medium">{p.artist}</p>
         <h1 className="text-3xl md:text-4xl font-black leading-tight">
           {p.title}
@@ -71,16 +71,16 @@ export default async function ProgramDetailPage({ params }: Props) {
       )}
 
       {/* Description */}
-      <div className="mb-10">
-        <p className="text-base leading-relaxed whitespace-pre-wrap">
+      <div className="mb-14">
+        <p className="text-base leading-loose whitespace-pre-wrap">
           {p.description}
         </p>
       </div>
 
       {/* Info table */}
-      <div className="bg-white rounded-lg p-6 mb-10">
-        <h2 className="text-lg font-bold mb-4">公演情報</h2>
-        <dl className="space-y-3 text-sm">
+      <div className="bg-white rounded-lg p-8 mb-14">
+        <h2 className="text-lg font-bold mb-6">公演情報</h2>
+        <dl className="space-y-4 text-sm">
           {[
             { label: "日程", value: p.dates },
             { label: "スケジュール", value: p.schedule },
@@ -105,7 +105,7 @@ export default async function ProgramDetailPage({ params }: Props) {
 
       {/* Notes & Accessibility */}
       {(p.notes || p.accessibility || p.triggerWarning) && (
-        <div className="space-y-4 mb-10">
+        <div className="space-y-5 mb-14">
           {p.notes && (
             <div className="bg-yellow/20 border border-yellow rounded-lg p-4">
               <p className="text-sm font-bold mb-1">注意事項</p>
@@ -123,9 +123,9 @@ export default async function ProgramDetailPage({ params }: Props) {
 
       {/* Profile */}
       {p.profile && (
-        <div className="mb-10">
-          <h2 className="text-lg font-bold mb-4">プロフィール</h2>
-          <div className="flex flex-col md:flex-row gap-6">
+        <div className="mb-14">
+          <h2 className="text-lg font-bold mb-6">プロフィール</h2>
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="w-32 h-32 relative bg-black/5 rounded-lg overflow-hidden shrink-0">
               <FallbackImage
                 src={profileImageSrc}
@@ -156,8 +156,8 @@ export default async function ProgramDetailPage({ params }: Props) {
 
       {/* Venue info */}
       {venue && (
-        <div className="bg-white rounded-lg p-6 mb-10">
-          <h2 className="text-lg font-bold mb-3">会場</h2>
+        <div className="bg-white rounded-lg p-8 mb-14">
+          <h2 className="text-lg font-bold mb-4">会場</h2>
           <p className="font-bold">{venue.name}</p>
           <p className="text-sm text-black/60 whitespace-pre-wrap mt-1">
             {venue.address}
