@@ -41,7 +41,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
         <div className="pt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-black/50">
           <span>{performance.dates}</span>
           <span>{venue?.name}</span>
-          {performance.price && <span>{performance.price}</span>}
+
         </div>
       </div>
     </Link>
