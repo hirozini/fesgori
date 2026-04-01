@@ -42,6 +42,11 @@ export default function Home() {
           <p className="text-sm leading-relaxed text-black/50 -rotate-1">
             羽鳥嘉郎が羽鳥ヨダ嘉郎とともに企画する上演芸術のフェスティバル！　早稲田小劇場どらま館の協力のもと、早稲田周辺のさまざまな施設で、メジャーからもマイナーからもこぼれた多様な体・空間と出会える機会を提供します。「いぬのせなか座」山本浩貴が企画協力として参加！
           </p>
+          <div className="text-right mt-4">
+            <Link href="/about" className="text-xs text-black/30 hover:text-black/50 transition-colors">
+              もっとくわしく→
+            </Link>
+          </div>
         </div>
       </section>
 
