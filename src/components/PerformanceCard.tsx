@@ -25,11 +25,6 @@ export function PerformanceCard({ performance }: Props) {
           className="object-cover group-hover:scale-105 transition-transform duration-300"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-        <div className="absolute top-3 left-3">
-          <span className="bg-yellow text-black text-xs font-bold px-2 py-1 rounded">
-            {performance.genre}
-          </span>
-        </div>
       </div>
       <div className="p-4 space-y-2">
         <p className="text-xs text-black/50 font-medium">

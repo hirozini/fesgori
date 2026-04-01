@@ -47,9 +47,6 @@ export default async function ProgramDetailPage({ params }: Props) {
 
       {/* Header */}
       <div className="space-y-3 mb-8">
-        <span className="inline-block bg-yellow text-black text-xs font-bold px-3 py-1 rounded">
-          {p.genre}
-        </span>
         <p className="text-sm text-black/50 font-medium">{p.artist}</p>
         <h1 className="text-3xl md:text-4xl font-black leading-tight">
           {p.title}
