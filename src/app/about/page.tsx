@@ -51,7 +51,7 @@ export default function AboutPage() {
         {/* Credit */}
         <section>
           <h2 className="text-xl font-bold mb-4">
-            クレジット
+            <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md rotate-2 border-2 border-black">クレジット</span>
           </h2>
           <dl className="space-y-2 text-base">
             <div className="flex gap-4">
