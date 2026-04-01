@@ -82,7 +82,6 @@ export default async function ProgramDetailPage({ params }: Props) {
         <h2 className="text-lg font-bold mb-4">公演情報</h2>
         <dl className="space-y-3 text-sm">
           {[
-            { label: "日程", value: p.dates },
             { label: "スケジュール", value: p.schedule },
             { label: "上演時間", value: p.duration },
             { label: "会場", value: venue?.name },

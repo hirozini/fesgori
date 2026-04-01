@@ -16,7 +16,7 @@ const navLinks = [
   { href: "/about", label: "ABOUT" },
   { href: "/program", label: "PROGRAM" },
   { href: "/timetable", label: "TIMETABLE" },
-  { href: "/map", label: "MAP" },
+  { href: "/map", label: "ACCESS" },
 ];
 
 export default function RootLayout({
