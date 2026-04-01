@@ -80,12 +80,6 @@ export default function AboutPage() {
             </div>
           </dl>
         </section>
-        {/* Lynch link */}
-        <section className="bg-yellow/30 p-6 rounded-lg">
-          <p className="text-sm font-medium">
-            戯曲集『リンチ』特設ページは現在準備中です。
-          </p>
-        </section>
       </div>
     </div>
   );
