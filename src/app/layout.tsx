@@ -52,7 +52,7 @@ export default function RootLayout({
                 alt="フェスごり"
                 width={160}
                 height={48}
-                className="h-10 w-auto"
+                className="h-10 md:h-12 w-auto"
               />
             </Link>
             <nav className="hidden md:flex gap-6">
