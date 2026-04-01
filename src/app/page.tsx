@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-yellow flex flex-col items-center px-4 pt-8 pb-6 md:h-[calc(100vh-3.5rem)] md:justify-center">
+      <div className="bg-yellow flex flex-col items-center px-4 pt-4 pb-6 md:pt-8 md:h-[calc(100vh-3.5rem)] md:justify-center">
         <Image
           src="/images/hero.jpg"
           alt={festival.name}
