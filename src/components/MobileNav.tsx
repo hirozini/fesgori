@@ -33,20 +33,24 @@ export function MobileNav({ links }: Props) {
           )}
         </svg>
       </button>
-      {open && (
-        <nav className="absolute top-14 left-0 right-0 bg-cream border-b border-black/10 py-4 px-4 space-y-3">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block text-base font-medium py-1"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      )}
+      <nav
+        className={`absolute top-14 left-0 right-0 bg-cream border-b border-black/10 py-4 px-4 space-y-3 transition-all duration-300 ease-out ${
+          open
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-2 pointer-events-none"
+        }`}
+      >
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className="block text-base font-medium py-1"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
     </div>
   );
 }
