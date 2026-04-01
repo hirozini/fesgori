@@ -46,9 +46,9 @@ export default function RootLayout({
               <Image
                 src="/images/Title_left.png"
                 alt="フェスごり"
-                width={120}
-                height={36}
-                className="h-8 w-auto"
+                width={160}
+                height={48}
+                className="h-10 w-auto"
               />
             </Link>
             <nav className="hidden md:flex gap-6">
