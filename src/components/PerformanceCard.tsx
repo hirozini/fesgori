@@ -17,7 +17,7 @@ export function PerformanceCard({ performance }: Props) {
       href={`/program/${performance.id}`}
       className="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
     >
-      <div className="aspect-[3/2] relative bg-black/5 overflow-hidden">
+      <div className="aspect-square relative bg-black/5 overflow-hidden">
         <FallbackImage
           src={imageSrc}
           alt={performance.title}
