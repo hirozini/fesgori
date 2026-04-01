@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "TIMETABLE — フェスティバルご理解ありがとうございます",
 };
 
+const underlineColor: Record<string, string> = {
+  tezuka: "decoration-rose-400",
+  dracom: "decoration-sky-400",
+  sakata: "decoration-amber-400",
+  slopes: "decoration-emerald-400",
+  tsubure: "decoration-purple-400",
+  sakai: "decoration-pink-400",
+  hosoma: "decoration-indigo-400",
+};
+
 function getTimeSlots(): string[] {
   const times = new Set(timetable.events.map((e) => e.time));
   return Array.from(times).sort();
@@ -57,7 +67,7 @@ export default function TimetablePage() {
                             href={`/program/${ev.performanceId}`}
                             className="block py-1 transition-opacity hover:opacity-60"
                           >
-                            <p className="font-bold text-xs">{ev.label}</p>
+                            <p className={`font-bold text-xs underline decoration-2 underline-offset-2 ${underlineColor[ev.performanceId] || ""}`}>{ev.label}</p>
                             <p className="text-[11px] text-black/50">
                               {ev.venue}・{ev.duration}分
                             </p>
@@ -119,7 +129,7 @@ export default function TimetablePage() {
                             href={`/program/${ev.performanceId}`}
                             className={`block py-1 transition-opacity hover:opacity-60 ${group.events.length > 1 ? "relative pl-3 border-l-2 border-yellow" : ""}`}
                           >
-                            <p className="font-bold text-sm">{ev.label}</p>
+                            <p className={`font-bold text-sm underline decoration-2 underline-offset-2 ${underlineColor[ev.performanceId] || ""}`}>{ev.label}</p>
                             <p className="text-xs text-black/50">
                               {ev.venue}・{ev.duration}分
                             </p>
