@@ -7,13 +7,13 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-yellow flex flex-col items-center px-4 pt-8 pb-6">
+      <div className="bg-yellow flex flex-col items-center px-4 pt-8 pb-6 md:h-[calc(100vh-3.5rem)] md:justify-center">
         <Image
           src="/images/hero.jpg"
           alt={festival.name}
           width={1200}
           height={800}
-          className="hidden md:block w-full max-w-4xl h-auto object-contain"
+          className="hidden md:block w-full max-w-4xl h-auto object-contain md:max-h-[calc(100vh-14rem)]"
           priority
         />
         <Image
