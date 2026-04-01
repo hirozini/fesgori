@@ -25,9 +25,9 @@ export default function Home() {
         />
       </div>
 
-      {/* Catchcopy card */}
-      <section className="max-w-3xl mx-auto px-4 py-12">
-        <div className="bg-white rounded-lg shadow-sm p-8 md:p-10">
+      {/* Catchcopy band */}
+      <section className="bg-yellow/25 py-12 px-4">
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-lg md:text-xl font-bold leading-relaxed mb-4">
             「わかってくれてよかった」――そう述べておくことで「上演」でき、共有できるようになるものを一挙に集めた、しびれるほど楽しい一週間！
           </h2>
