@@ -15,7 +15,7 @@ export default function AboutPage() {
           <p className="text-sm mt-2 opacity-70">{festival.nameEn}</p>
         </div>
       </section>
-      <div className="max-w-3xl mx-auto px-6 md:px-10 py-20 space-y-20">
+      <div className="max-w-3xl mx-auto px-4 py-12 space-y-16">
         {/* Overview */}
         <section>
           <h2 className="text-xl font-bold mb-4">

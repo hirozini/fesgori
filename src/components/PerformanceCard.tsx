@@ -26,7 +26,7 @@ export function PerformanceCard({ performance }: Props) {
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
-      <div className="p-5 space-y-3">
+      <div className="p-4 space-y-2">
         <p className="text-xs text-black/50 font-medium">
           {performance.artist}
         </p>
