@@ -70,22 +70,25 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
 
         {/* Footer */}
-        <footer className="bg-black text-white py-12">
-          <div className="max-w-6xl mx-auto px-4 space-y-6">
-            <p className="text-lg font-bold font-serif">{festival.name}</p>
-            <p className="text-sm text-white/70">{festival.nameEn}</p>
-            <p className="text-sm text-white/70">
-              {festival.period}　{festival.area}
-            </p>
-            <div className="text-xs text-white/50 space-y-1">
-              <p>企画：{festival.credit.planning}</p>
-              <p>主催：{festival.credit.organizer}</p>
-              <p>共催：{festival.credit.coOrganizer}</p>
-              <p>協力：{festival.credit.cooperation}</p>
-              <p>企画協力：{festival.credit.planningCooperation}</p>
-            </div>
-            <div className="pt-4 border-t border-white/20 text-xs text-white/40">
-              <p>お問い合わせ：fesgori@example.com</p>
+        <footer>
+          <div className="h-2 bg-yellow" />
+          <div className="bg-black text-white py-12">
+            <div className="max-w-6xl mx-auto px-4 space-y-6">
+              <p className="text-lg font-bold text-yellow">{festival.name}</p>
+              <p className="text-sm text-white/70">{festival.nameEn}</p>
+              <p className="text-sm text-white/70">
+                {festival.period}　{festival.area}
+              </p>
+              <div className="text-xs text-white/50 space-y-1">
+                <p>企画：{festival.credit.planning}</p>
+                <p>主催：{festival.credit.organizer}</p>
+                <p>共催：{festival.credit.coOrganizer}</p>
+                <p>協力：{festival.credit.cooperation}</p>
+                <p>企画協力：{festival.credit.planningCooperation}</p>
+              </div>
+              <div className="pt-4 border-t border-white/20 text-xs text-white/40">
+                <p>お問い合わせ：fesgori@example.com</p>
+              </div>
             </div>
           </div>
         </footer>
