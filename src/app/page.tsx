@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-yellow flex flex-col items-center justify-center px-4 py-6" style={{ maxHeight: "calc(100vh - 3.5rem)" }}>
+      <div className="bg-yellow flex flex-col items-center justify-center px-4 py-6 overflow-hidden" style={{ height: "calc(100vh - 3.5rem)" }}>
         <Image
           src="/images/hero.jpg"
           alt={festival.name}
