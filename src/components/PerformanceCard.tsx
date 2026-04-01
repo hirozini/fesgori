@@ -22,7 +22,7 @@ export function PerformanceCard({ performance }: Props) {
           src={imageSrc}
           alt={performance.title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className={`object-cover group-hover:scale-105 transition-transform duration-300 ${performance.id === "tsubure" ? "object-top" : ""}`}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
