@@ -40,7 +40,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-cream text-black font-sans">
         {/* Header */}
-        <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-black/10">
+        <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b-2 border-yellow">
           <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
             <Link href="/">
               <Image
