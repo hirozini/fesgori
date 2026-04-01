@@ -35,7 +35,7 @@ export default function AboutPage() {
               </p>
             ))}
           </div>
-          <p className="mt-6 text-sm text-black font-bold">
+          <p className="mt-6 text-base text-black font-bold">
             {festival.statement.signature}
           </p>
         </section>
