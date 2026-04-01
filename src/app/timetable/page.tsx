@@ -55,10 +55,10 @@ export default function TimetablePage() {
                 {timeGroups.map((group) => {
                   const isOverlap = group.events.length > 1;
                   return (
-                    <div key={group.time} className="flex gap-3">
+                    <div key={group.time} className="flex gap-3 items-start">
                       {/* Time column */}
-                      <div className="w-16 shrink-0 pt-3">
-                        <span className="text-lg font-bold">{group.time}</span>
+                      <div className="w-16 shrink-0 py-3">
+                        <span className="text-sm font-bold leading-none">{group.time}</span>
                       </div>
 
                       {/* Events */}
