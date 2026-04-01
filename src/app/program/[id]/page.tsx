@@ -92,7 +92,25 @@ export default async function ProgramDetailPage({ params }: Props) {
       {/* Description */}
       <div className="mb-10">
         <p className="text-base leading-relaxed whitespace-pre-wrap">
-          {p.description}
+          {p.id === "slopes"
+            ? p.description.split("簡易××式骨声霊承のRVCモデル学習").map((part, i, arr) =>
+                i < arr.length - 1 ? (
+                  <span key={i}>
+                    {part}
+                    <a
+                      href="https://ymy6jnbuwsj7.blog.fc2.com/blog-entry-15.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline text-black/70 hover:text-black"
+                    >
+                      簡易××式骨声霊承のRVCモデル学習
+                    </a>
+                  </span>
+                ) : (
+                  <span key={i}>{part}</span>
+                )
+              )
+            : p.description}
         </p>
       </div>
 
