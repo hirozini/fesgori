@@ -38,7 +38,10 @@ export default function Home() {
       </section>
 
       {/* Performances */}
-      <section className="max-w-6xl mx-auto px-4 pb-16">
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <h2 className="text-2xl font-bold mb-8">
+          <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md -rotate-1">公演一覧</span>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {performances.map((p, i) => (
             <FadeIn key={p.id} delay={i * 80}>
