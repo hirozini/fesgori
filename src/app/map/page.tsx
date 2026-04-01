@@ -59,7 +59,7 @@ export default function MapPage() {
                 </div>
               )}
               <a
-                href={`https://www.google.com/maps?q=${venue.lat},${venue.lng}`}
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 text-sm underline text-black/60 hover:text-black"

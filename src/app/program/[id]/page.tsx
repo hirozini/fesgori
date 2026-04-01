@@ -163,7 +163,7 @@ export default async function ProgramDetailPage({ params }: Props) {
             {venue.address}
           </p>
           <a
-            href={`https://www.google.com/maps?q=${venue.lat},${venue.lng}`}
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.name)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-3 text-sm underline text-black/60 hover:text-black"
