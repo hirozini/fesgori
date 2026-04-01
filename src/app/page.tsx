@@ -27,6 +27,9 @@ export default function Home() {
 
       {/* Performances */}
       <section className="max-w-6xl mx-auto px-4 py-16">
+        <p className="text-xl md:text-2xl font-bold leading-relaxed mb-12">
+          「わかってくれてよかった」――そう述べておくことで「上演」でき、共有できるようになるものを一挙に集めた、しびれるほど楽しい一週間！
+        </p>
         <h2 className="text-2xl font-bold mb-8">
           公演一覧
         </h2>

@@ -18,9 +18,9 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto px-4 py-12 space-y-16">
         {/* Overview */}
         <section>
-          <h2 className="text-xl font-bold mb-4">
-            概要
-          </h2>
+          <p className="text-xl md:text-2xl font-bold leading-relaxed mb-8">
+            「わかってくれてよかった」――そう述べておくことで「上演」でき、共有できるようになるものを一挙に集めた、しびれるほど楽しい一週間！
+          </p>
           <p className="text-base leading-relaxed">{festival.overview}</p>
         </section>
         {/* Statement */}
