@@ -71,27 +71,29 @@ export default async function ProgramDetailPage({ params }: Props) {
         </p>
       )}
 
+      {/* Co-performance link */}
+      {p.id === "tsubure" && (
+        <Link
+          href="/program/sakai"
+          className="inline-block mb-10 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
+        >
+          同時上演「埒外の女」→
+        </Link>
+      )}
+      {p.id === "sakai" && (
+        <Link
+          href="/program/tsubure"
+          className="inline-block mb-10 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
+        >
+          同時上演「ウィシュマ裁き」→
+        </Link>
+      )}
+
       {/* Description */}
       <div className="mb-10">
         <p className="text-base leading-relaxed whitespace-pre-wrap">
           {p.description}
         </p>
-        {p.id === "tsubure" && (
-          <Link
-            href="/program/sakai"
-            className="inline-block mt-4 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
-          >
-            同時上演「埒外の女」→
-          </Link>
-        )}
-        {p.id === "sakai" && (
-          <Link
-            href="/program/tsubure"
-            className="inline-block mt-4 bg-yellow/30 border-2 border-black rounded px-4 py-2 text-sm font-bold hover:bg-yellow/50 transition-colors"
-          >
-            同時上演「ウィシュマ裁き」→
-          </Link>
-        )}
       </div>
 
       {/* Info table */}
