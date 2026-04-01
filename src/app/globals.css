@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yellow: #fff173;
+  --color-cream: #fafaf5;
+  --color-black: #1a1a1a;
+  --font-sans: "Noto Sans JP", sans-serif;
+  --font-serif: "Noto Serif JP", serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Noto Serif JP", serif;
+}
