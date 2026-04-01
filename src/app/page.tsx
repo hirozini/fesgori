@@ -26,12 +26,12 @@ export default function Home() {
       </div>
 
       {/* Catchcopy band */}
-      <section className="bg-yellow/25 py-12 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-lg md:text-xl font-bold leading-relaxed mb-4">
-            「わかってくれてよかった」――そう述べておくことで「上演」でき、共有できるようになるものを一挙に集めた、しびれるほど楽しい一週間！
-          </h2>
-          <p className="text-sm leading-relaxed text-black/60">
+      <section className="bg-yellow/25 py-14 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-lg md:text-xl font-bold leading-relaxed mb-6 rotate-1">
+            <span className="inline-block border-b-3 border-yellow">「わかってくれてよかった」</span>――そう述べておくことで「上演」でき、共有できるようになるものを一挙に集めた、しびれるほど楽しい一週間！
+          </p>
+          <p className="text-sm leading-relaxed text-black/50 -rotate-1">
             {festival.overview}
           </p>
         </div>
