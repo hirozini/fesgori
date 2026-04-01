@@ -48,7 +48,7 @@ export default function AboutPage() {
             期間
           </h2>
           <p className="text-lg font-bold">
-            {festival.period}　{festival.area}
+            {festival.period}
           </p>
         </section>
         {/* Credit */}

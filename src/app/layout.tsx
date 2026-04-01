@@ -76,7 +76,7 @@ export default function RootLayout({
               <p className="text-lg font-bold text-yellow">{festival.name}</p>
               <p className="text-sm text-white/70">{festival.nameEn}</p>
               <p className="text-sm text-white/70">
-                {festival.period}　{festival.area}
+                {festival.period}
               </p>
               <div className="text-xs text-white/50 space-y-1">
                 <p>企画：{festival.credit.planning}</p>
