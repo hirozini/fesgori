@@ -57,7 +57,7 @@ export default function TimetablePage() {
                   return (
                     <div key={group.time} className="flex gap-3 items-start">
                       {/* Time column */}
-                      <div className="w-16 shrink-0 pt-4">
+                      <div className="w-16 shrink-0 pt-3.5">
                         <span className="text-base font-bold leading-none">{group.time}</span>
                       </div>
 
