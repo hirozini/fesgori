@@ -3,8 +3,6 @@ import { festival, performances } from "@/lib/festival";
 import { PerformanceCard } from "@/components/PerformanceCard";
 
 export default function Home() {
-  const [first, ...rest] = performances;
-
   return (
     <div>
       {/* Hero */}
@@ -35,25 +33,9 @@ export default function Home() {
           <span className="inline-block w-8 h-1 bg-yellow" />
           公演一覧
         </h2>
-
-        {/* Featured: first performance full width */}
-        <div className="mb-8">
-          <PerformanceCard performance={first} featured />
-        </div>
-
-        {/* Rest: editorial grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {rest.map((p, i) => (
-            <div
-              key={p.id}
-              className={
-                i === 0 || i === 3
-                  ? "md:col-span-2"
-                  : ""
-              }
-            >
-              <PerformanceCard performance={p} featured={i === 0 || i === 3} />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {performances.map((p) => (
+            <PerformanceCard key={p.id} performance={p} />
           ))}
         </div>
       </section>
