@@ -24,13 +24,9 @@ export default function Home() {
         />
       </div>
 
-      {/* Yellow accent line */}
-      <div className="h-1.5 bg-yellow" />
-
       {/* Performances */}
-      <section className="max-w-6xl mx-auto px-4 py-20">
-        <h2 className="text-2xl font-bold mb-12 flex items-center gap-3">
-          <span className="inline-block w-8 h-1 bg-yellow" />
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <h2 className="text-2xl font-bold mb-8">
           公演一覧
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -41,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* Notice bar */}
-      <section className="bg-yellow/30 py-6 px-4 border-t-2 border-yellow">
+      <section className="bg-black/5 py-6 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm font-medium text-black/70">
             {festival.generalNotes}
