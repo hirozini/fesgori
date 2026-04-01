@@ -42,9 +42,9 @@ export default function AboutPage() {
         {/* Period */}
         <section>
           <h2 className="text-xl font-bold mb-4">
-            期間
+            <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md rotate-2 border-2 border-black">期間</span>
           </h2>
-          <p className="text-lg font-bold">
+          <p className="text-sm font-bold">
             {festival.period}
           </p>
         </section>
