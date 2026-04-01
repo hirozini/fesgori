@@ -25,20 +25,21 @@ export default function Home() {
         />
       </div>
 
+      {/* Catchcopy card */}
+      <section className="max-w-3xl mx-auto px-4 py-12">
+        <div className="bg-white rounded-lg shadow-sm p-8 md:p-10">
+          <h2 className="text-lg md:text-xl font-bold leading-relaxed mb-4">
+            「わかってくれてよかった」――そう述べておくことで「上演」でき、共有できるようになるものを一挙に集めた、しびれるほど楽しい一週間！
+          </h2>
+          <p className="text-sm leading-relaxed text-black/60">
+            {festival.overview}
+          </p>
+        </div>
+      </section>
+
       {/* Performances */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section className="max-w-6xl mx-auto px-4 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* About card */}
-          <FadeIn>
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm p-6 md:p-8 flex flex-col justify-center h-full">
-              <h2 className="text-xl md:text-2xl font-bold leading-relaxed mb-4">
-                「わかってくれてよかった」――そう述べておくことで「上演」でき、共有できるようになるものを一挙に集めた、しびれるほど楽しい一週間！
-              </h2>
-              <p className="text-sm leading-relaxed text-black/70">
-                {festival.overview}
-              </p>
-            </div>
-          </FadeIn>
           {performances.map((p, i) => (
             <FadeIn key={p.id} delay={i * 80}>
               <PerformanceCard performance={p} />
