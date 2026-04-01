@@ -13,7 +13,7 @@ export default function MapPage() {
       {/* Google Maps embed */}
       <div className="aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden mb-10">
         <iframe
-          src={`https://www.google.com/maps/embed/v1/view?key=&center=${center.lat},${center.lng}&zoom=16`}
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3239.5!2d139.718!3d35.708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp"
           width="100%"
           height="100%"
           style={{ border: 0 }}
