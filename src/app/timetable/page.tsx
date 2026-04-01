@@ -6,16 +6,6 @@ export const metadata: Metadata = {
   title: "TIMETABLE — フェスティバルご理解ありがとうございます",
 };
 
-const colorMap: Record<string, string> = {
-  tezuka: "bg-rose-100 border-rose-300 hover:bg-rose-200",
-  dracom: "bg-sky-100 border-sky-300 hover:bg-sky-200",
-  sakata: "bg-amber-100 border-amber-300 hover:bg-amber-200",
-  slopes: "bg-emerald-100 border-emerald-300 hover:bg-emerald-200",
-  tsubure: "bg-purple-100 border-purple-300 hover:bg-purple-200",
-  sakai: "bg-pink-100 border-pink-300 hover:bg-pink-200",
-  hosoma: "bg-indigo-100 border-indigo-300 hover:bg-indigo-200",
-};
-
 function getTimeSlots(): string[] {
   const times = new Set(timetable.events.map((e) => e.time));
   return Array.from(times).sort();
@@ -49,59 +39,41 @@ export default function TimetablePage() {
             </tr>
           </thead>
           <tbody>
-            {getTimeSlots().map((time) => {
-              // Check if any date has multiple events at this time
-              const hasOverlapAnywhere = timetable.dates.some((d) => {
-                return (
-                  timetable.events.filter(
+            {getTimeSlots().map((time) => (
+              <tr key={time} className="border-b border-black/5">
+                <td className="p-3 font-medium text-black/50 align-top">
+                  {time}
+                </td>
+                {timetable.dates.map((d) => {
+                  const events = timetable.events.filter(
                     (e) => e.date === d.key && e.time === time
-                  ).length > 1
-                );
-              });
-
-              return (
-                <tr
-                  key={time}
-                  className={`border-b border-black/5 ${hasOverlapAnywhere ? "bg-yellow/10" : ""}`}
-                >
-                  <td className="p-3 font-medium text-black/50 align-top">
-                    {time}
-                  </td>
-                  {timetable.dates.map((d) => {
-                    const events = timetable.events.filter(
-                      (e) => e.date === d.key && e.time === time
-                    );
-                    const isOverlap = events.length > 1;
-                    return (
-                      <td key={d.key} className="p-2 align-top">
-                        <div className="space-y-1">
-                          {events.map((ev, i) => (
-                            <Link
-                              key={i}
-                              href={`/program/${ev.performanceId}`}
-                              className={`block p-2 rounded border text-xs transition-colors ${
-                                colorMap[ev.performanceId] ||
-                                "bg-gray-100 border-gray-300"
-                              } ${isOverlap ? "ring-2 ring-yellow ring-offset-1" : ""}`}
-                            >
-                              <p className="font-bold">{ev.label}</p>
-                              <p className="text-black/50">
-                                {ev.venue}・{ev.duration}分
+                  );
+                  return (
+                    <td key={d.key} className="p-2 align-top">
+                      <div className={events.length > 1 ? "flex gap-3" : ""}>
+                        {events.map((ev, i) => (
+                          <Link
+                            key={i}
+                            href={`/program/${ev.performanceId}`}
+                            className="block py-1 transition-opacity hover:opacity-60"
+                          >
+                            <p className="font-bold text-xs">{ev.label}</p>
+                            <p className="text-[11px] text-black/50">
+                              {ev.venue}・{ev.duration}分
+                            </p>
+                            {"note" in ev && ev.note && (
+                              <p className="text-[11px] text-black/40">
+                                {ev.note}
                               </p>
-                              {"note" in ev && ev.note && (
-                                <p className="text-black/40 mt-0.5">
-                                  {ev.note}
-                                </p>
-                              )}
-                            </Link>
-                          ))}
-                        </div>
-                      </td>
-                    );
-                  })}
-                </tr>
-              );
-            })}
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -133,7 +105,6 @@ export default function TimetablePage() {
               <div>
                 {timeGroups.map((group, gi) => (
                   <div key={group.time}>
-                    {/* Dotted connector */}
                     {gi > 0 && (
                       <div className="ml-6 h-6 border-l-2 border-dotted border-black/20" />
                     )}
