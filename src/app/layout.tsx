@@ -86,6 +86,7 @@ export default function RootLayout({
                 <p>共催：{festival.credit.coOrganizer}</p>
                 <p>協力：{festival.credit.cooperation}</p>
                 <p>企画協力：{festival.credit.planningCooperation}</p>
+                <p>漫画：八津田茂「近所のボランティアの中学生」</p>
               </div>
               <div className="pt-4 border-t border-white/20 text-xs text-white/40">
                 <p>お問い合わせ：fesgori@example.com</p>
