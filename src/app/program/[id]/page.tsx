@@ -162,11 +162,6 @@ export default async function ProgramDetailPage({ params }: Props) {
           <p className="text-sm text-black/60 whitespace-pre-wrap mt-1">
             {venue.address}
           </p>
-          {venue.hours && (
-            <p className="text-sm text-black/50 mt-1">
-              開館時間：{venue.hours}
-            </p>
-          )}
           <a
             href={`https://www.google.com/maps?q=${venue.lat},${venue.lng}`}
             target="_blank"
