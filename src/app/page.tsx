@@ -38,15 +38,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* Notice bar */}
-      <section className="bg-black/5 py-6 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm font-medium text-black/70">
-            {festival.generalNotes}
-          </p>
-        </div>
-      </section>
     </div>
   );
 }
