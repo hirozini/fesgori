@@ -13,7 +13,16 @@ export default function Home() {
           alt={festival.name}
           width={1200}
           height={800}
-          className="max-w-4xl h-auto object-contain flex-shrink"
+          className="hidden md:block max-w-4xl h-auto object-contain flex-shrink"
+          style={{ maxHeight: "calc(100vh - 12rem)" }}
+          priority
+        />
+        <Image
+          src="/images/hero_sp.jpg"
+          alt={festival.name}
+          width={600}
+          height={900}
+          className="md:hidden w-full h-auto object-contain flex-shrink"
           style={{ maxHeight: "calc(100vh - 12rem)" }}
           priority
         />
