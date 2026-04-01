@@ -73,8 +73,10 @@ export default function RootLayout({
         <footer>
           <div className="bg-black text-white py-12">
             <div className="max-w-6xl mx-auto px-4 space-y-6">
-              <p className="text-lg font-bold text-yellow">{festival.name}</p>
-              <p className="text-sm text-white/70">{festival.nameEn}</p>
+              <div>
+                <p className="text-lg font-bold text-yellow">{festival.name}</p>
+                <p className="text-sm text-white/70 mt-1">{festival.nameEn}</p>
+              </div>
               <p className="text-sm text-white/70">
                 {festival.period}
               </p>
