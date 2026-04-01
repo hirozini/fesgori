@@ -7,14 +7,13 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-yellow flex flex-col items-center justify-center px-4 py-6 overflow-hidden" style={{ height: "calc(100vh - 3.5rem)" }}>
+      <div className="bg-yellow flex flex-col items-center px-4 pt-8 pb-6">
         <Image
           src="/images/hero.jpg"
           alt={festival.name}
           width={1200}
           height={800}
-          className="hidden md:block max-w-4xl h-auto object-contain flex-shrink"
-          style={{ maxHeight: "calc(100vh - 12rem)" }}
+          className="hidden md:block w-full max-w-4xl h-auto object-contain"
           priority
         />
         <Image
@@ -22,8 +21,7 @@ export default function Home() {
           alt={festival.name}
           width={600}
           height={900}
-          className="md:hidden w-full h-auto object-contain flex-shrink"
-          style={{ maxHeight: "calc(100vh - 3.5rem)" }}
+          className="md:hidden w-full h-auto object-contain"
           priority
         />
         <Image
