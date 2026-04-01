@@ -25,18 +25,14 @@ export default function Home() {
       </div>
 
       {/* Performances */}
-      <section className="py-16">
-        <h2 className="text-2xl font-bold mb-8 px-4 max-w-6xl mx-auto">
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <h2 className="text-2xl font-bold mb-8">
           公演一覧
         </h2>
-        <div className="overflow-x-auto px-4 pb-4 -mb-4 scrollbar-hide">
-          <div className="flex gap-5 w-max">
-            {performances.map((p) => (
-              <div key={p.id} className="w-72 md:w-80 shrink-0">
-                <PerformanceCard performance={p} />
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {performances.map((p) => (
+            <PerformanceCard key={p.id} performance={p} />
+          ))}
         </div>
       </section>
 
