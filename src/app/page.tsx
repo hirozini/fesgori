@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { festival, performances } from "@/lib/festival";
 import { PerformanceCard } from "@/components/PerformanceCard";
 import { FadeIn } from "@/components/FadeIn";
