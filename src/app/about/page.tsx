@@ -26,7 +26,7 @@ export default function AboutPage() {
         {/* Statement */}
         <section>
           <h2 className="text-xl font-bold mb-4">
-            ステートメント
+            <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md rotate-2 border-2 border-black">ステートメント</span>
           </h2>
           <div className="space-y-4">
             {festival.statement.paragraphs.map((p, i) => (
@@ -35,11 +35,8 @@ export default function AboutPage() {
               </p>
             ))}
           </div>
-          <p className="mt-6 text-sm text-black/50">
+          <p className="mt-6 text-sm text-black font-bold">
             {festival.statement.signature}
-          </p>
-          <p className="text-xs text-black/40 mt-1">
-            {festival.statement.updatedAt} 更新
           </p>
         </section>
         {/* Period */}
