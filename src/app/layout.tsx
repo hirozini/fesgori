@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 import { festival } from "@/lib/festival";
@@ -33,7 +34,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>
@@ -41,8 +42,14 @@ export default function RootLayout({
         {/* Header */}
         <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-black/10">
           <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-            <Link href="/" className="text-sm font-bold tracking-tight font-serif">
-              フェスごり
+            <Link href="/">
+              <Image
+                src="/images/Title_left.png"
+                alt="フェスごり"
+                width={120}
+                height={36}
+                className="h-8 w-auto"
+              />
             </Link>
             <nav className="hidden md:flex gap-6">
               {navLinks.map((link) => (

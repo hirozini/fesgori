@@ -6,43 +6,23 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+      <div className="bg-yellow flex flex-col items-center px-4 pt-8 pb-6">
         <Image
           src="/images/hero.jpg"
           alt={festival.name}
-          fill
-          className="object-cover"
+          width={1200}
+          height={800}
+          className="w-full max-w-4xl h-auto object-contain"
           priority
         />
+        <Image
+          src="/images/Title.png"
+          alt={`${festival.name} タイトル`}
+          width={800}
+          height={200}
+          className="w-full max-w-2xl h-auto mt-6"
+        />
       </div>
-      {/* Yellow band */}
-      <section className="bg-yellow py-10 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-4">
-          <h1 className="text-2xl md:text-4xl font-black leading-tight">
-            {festival.name}
-          </h1>
-          <p className="text-sm md:text-base font-medium opacity-70">
-            {festival.nameEn}
-          </p>
-          <p className="text-base md:text-lg font-bold">
-            {festival.period}　{festival.area}
-          </p>
-          <div className="flex justify-center gap-4 pt-4">
-            <Link
-              href="/program"
-              className="bg-black text-yellow px-8 py-3 text-sm font-bold rounded hover:opacity-80 transition-opacity"
-            >
-              PROGRAM
-            </Link>
-            <Link
-              href="/about"
-              className="bg-black text-yellow px-8 py-3 text-sm font-bold rounded hover:opacity-80 transition-opacity"
-            >
-              ABOUT
-            </Link>
-          </div>
-        </div>
-      </section>
       {/* Performances */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-2xl font-bold mb-8">
