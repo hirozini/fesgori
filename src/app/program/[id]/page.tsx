@@ -39,7 +39,8 @@ export default async function ProgramDetailPage({ params }: Props) {
           src={imageSrc}
           alt={p.title}
           fill
-          className={`object-cover ${p.id === "tsubure" ? "object-top" : p.id === "sakata" ? "object-bottom" : ""}`}
+          className={`object-cover ${p.id === "sakata" ? "object-bottom" : ""}`}
+          style={p.id === "tsubure" ? { objectPosition: "center 20%" } : undefined}
           sizes="(max-width: 768px) 100vw, 800px"
           priority
         />
@@ -108,8 +109,12 @@ export default async function ProgramDetailPage({ params }: Props) {
         <div className="space-y-4 mb-10">
           {p.notes && (
             <div className="bg-yellow/20 border border-yellow rounded-lg p-4">
-              <p className="text-sm font-bold mb-1">注意事項</p>
-              <p className="text-sm whitespace-pre-wrap">{p.notes}</p>
+              <p className="text-sm font-bold mb-2">注意事項</p>
+              <ul className="text-sm space-y-1 list-disc list-inside">
+                {p.notes.split("\n").filter(Boolean).map((note, i) => (
+                  <li key={i}>{note}</li>
+                ))}
+              </ul>
             </div>
           )}
           {p.accessibility && (

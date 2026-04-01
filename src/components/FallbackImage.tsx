@@ -12,6 +12,7 @@ type Props = {
   className?: string;
   sizes?: string;
   priority?: boolean;
+  style?: React.CSSProperties;
 };
 
 export function FallbackImage({ src, alt, ...props }: Props) {
