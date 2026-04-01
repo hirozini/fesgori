@@ -26,7 +26,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
           src={imageSrc}
           alt={performance.title}
           fill
-          className={`object-cover group-hover:scale-105 transition-transform duration-300 ${performance.id === "tsubure" ? "object-top" : ""}`}
+          className={`object-cover group-hover:scale-105 transition-transform duration-300 ${performance.id === "tsubure" ? "object-top" : performance.id === "sakata" ? "object-bottom" : ""}`}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>

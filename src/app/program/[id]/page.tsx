@@ -39,7 +39,7 @@ export default async function ProgramDetailPage({ params }: Props) {
           src={imageSrc}
           alt={p.title}
           fill
-          className={`object-cover ${p.id === "tsubure" ? "object-top" : ""}`}
+          className={`object-cover ${p.id === "tsubure" ? "object-top" : p.id === "sakata" ? "object-bottom" : ""}`}
           sizes="(max-width: 768px) 100vw, 800px"
           priority
         />
