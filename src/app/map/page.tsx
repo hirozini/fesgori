@@ -1,5 +1,4 @@
 import { venues, performances } from "@/lib/festival";
-import { VenueMap } from "@/components/VenueMap";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,8 +6,6 @@ export const metadata: Metadata = {
 };
 
 export default function MapPage() {
-  const center = { lat: 35.708, lng: 139.718 };
-
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-black mb-10">
@@ -17,9 +14,17 @@ export default function MapPage() {
         </span>
       </h1>
 
-      {/* Map with pins */}
+      {/* Google My Maps embed */}
       <div className="aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden mb-10">
-        <VenueMap venues={venues} center={center} />
+        <iframe
+          src="https://www.google.com/maps/d/u/0/embed?mid=1cc_iaJCZ9GrSmi96uDbTvcHkfE8D9r4&ehbc=2E312F"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          title="会場マップ"
+        />
       </div>
 
       {/* Venue cards */}
