@@ -66,7 +66,7 @@ export default async function ProgramDetailPage({ params }: Props) {
           予約する
         </a>
       ) : (
-        <p className="inline-block bg-black/10 text-black/40 px-10 py-4 text-base font-bold rounded mb-10">
+        <p className={`inline-block bg-black/10 text-black/40 px-10 py-4 text-base font-bold rounded ${p.id === "tsubure" || p.id === "sakai" ? "mb-3" : "mb-10"}`}>
           予約準備中
         </p>
       )}
