@@ -31,7 +31,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
         />
       </div>
       <div className="p-4 space-y-2">
-        <p className="text-xs text-black/50 font-medium">
+        <p className="text-xs text-black font-bold">
           {performance.artist}
         </p>
         <h3 className="text-lg font-bold leading-tight">
