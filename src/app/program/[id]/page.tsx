@@ -89,6 +89,7 @@ export default async function ProgramDetailPage({ params }: Props) {
             { label: "定員", value: p.capacity || "未定" },
             { label: "出演", value: p.cast },
             { label: "スタッフ", value: p.staff },
+            ...(p.id === "dracom" ? [{ label: "共催", value: "戸山公園サービスセンター" }] : []),
           ]
             .filter((row) => row.value)
             .map((row) => (
