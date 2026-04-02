@@ -31,7 +31,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
   return (
     <Link
       href={`/program/${performance.id}`}
-      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-2 border-black ${tilt} hover:rotate-0`}
+      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-2 border-black/30 ${tilt} hover:rotate-0`}
     >
       <div className="aspect-[4/3] relative bg-black/5 overflow-hidden">
         <FallbackImage
