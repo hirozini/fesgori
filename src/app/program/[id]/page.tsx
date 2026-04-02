@@ -4,6 +4,16 @@ import { FallbackImage } from "@/components/FallbackImage";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+const underlineColor: Record<string, string> = {
+  tezuka: "decoration-rose-400",
+  dracom: "decoration-sky-400",
+  sakata: "decoration-amber-400",
+  slopes: "decoration-emerald-400",
+  tsubure: "decoration-purple-400",
+  sakai: "decoration-pink-400",
+  hosoma: "decoration-indigo-400",
+};
+
 export function generateStaticParams() {
   return performances.map((p) => ({ id: p.id }));
 }
@@ -48,7 +58,7 @@ export default async function ProgramDetailPage({ params }: Props) {
 
       {/* Header */}
       <div className="space-y-3 mb-8">
-        <p className="text-lg md:text-xl text-black font-bold">{p.artist}</p>
+        <p className={`text-lg md:text-xl text-black font-bold underline decoration-3 underline-offset-4 ${underlineColor[p.id] || ""}`}>{p.artist}</p>
         <h1 className="text-3xl md:text-4xl font-black leading-tight">
           {p.title}
         </h1>
