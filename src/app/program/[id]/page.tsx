@@ -164,7 +164,7 @@ export default async function ProgramDetailPage({ params }: Props) {
             </div>
           )}
           {p.accessibility && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-black/5 border border-black/10 rounded-lg p-4">
               <p className="text-sm font-bold mb-1">アクセシビリティ</p>
               <p className="text-sm whitespace-pre-wrap">{p.accessibility}</p>
             </div>
