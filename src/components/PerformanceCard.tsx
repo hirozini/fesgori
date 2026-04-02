@@ -61,7 +61,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
           {performance.title}
         </h3>
         <p className="text-sm text-black/60">{performance.catchcopy}</p>
-        <div className={`pt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs font-medium ${metaColor}`}>
+        <div className="pt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-black/50">
           <span>{performance.dates}</span>
           <span>{venue?.name}</span>
 
