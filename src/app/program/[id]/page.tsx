@@ -5,12 +5,12 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 const underlineColor: Record<string, string> = {
-  tezuka: "decoration-rose-400/60",
+  tezuka: "decoration-red-400/70",
   dracom: "decoration-sky-400/60",
   sakata: "decoration-amber-400/60",
-  slopes: "decoration-emerald-400/60",
-  tsubure: "decoration-purple-400/60",
-  sakai: "decoration-pink-400/60",
+  slopes: "decoration-green-500/60",
+  tsubure: "decoration-amber-600/50",
+  sakai: "decoration-orange-400/60",
   hosoma: "decoration-indigo-400/60",
 };
 
