@@ -15,14 +15,14 @@ const borderColor: Record<string, string> = {
   hosoma: "border-indigo-100",
 };
 
-const textColor: Record<string, string> = {
-  tezuka: "text-rose-300",
-  dracom: "text-sky-300",
-  sakata: "text-amber-300",
-  slopes: "text-emerald-300",
-  tsubure: "text-purple-300",
-  sakai: "text-pink-300",
-  hosoma: "text-indigo-300",
+const underlineColor: Record<string, string> = {
+  tezuka: "decoration-rose-300",
+  dracom: "decoration-sky-300",
+  sakata: "decoration-amber-300",
+  slopes: "decoration-emerald-300",
+  tsubure: "decoration-purple-300",
+  sakai: "decoration-pink-300",
+  hosoma: "decoration-indigo-300",
 };
 
 type Props = {
@@ -36,7 +36,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
   const imageSrc =
     performance.image || `/images/programs/${performance.id}.jpg`;
 
-  const metaColor = textColor[performance.id] || "text-black/50";
+  const underline = underlineColor[performance.id] || "";
   const border = borderColor[performance.id] || "border-gray-100";
 
   return (
@@ -54,13 +54,13 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
         />
       </div>
       <div className="p-4 space-y-2">
-        <p className="text-xs text-black font-bold">
+        <p className={`text-xs text-black font-bold underline decoration-2 underline-offset-2 ${underline}`}>
           {performance.artist}
         </p>
         <h3 className="text-lg font-bold leading-tight">
           {performance.title}
         </h3>
-        <p className={`text-sm ${metaColor}`}>{performance.catchcopy}</p>
+        <p className="text-sm text-black/60">{performance.catchcopy}</p>
         <div className="pt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-black/50">
           <span>{performance.dates}</span>
           <span>{venue?.name}</span>
