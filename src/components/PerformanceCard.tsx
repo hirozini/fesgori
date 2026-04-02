@@ -7,22 +7,22 @@ const tilts = ["-rotate-2", "rotate-1", "rotate-1", "-rotate-2", "-rotate-1", "r
 
 const borderColor: Record<string, string> = {
   tezuka: "border-c-tezuka/30",
-  dracom: "border-sky-200/60",
-  sakata: "border-amber-200/60",
+  dracom: "border-c-dracom/30",
+  sakata: "border-amber-200",
   slopes: "border-c-slopes/30",
-  tsubure: "border-purple-200/60",
+  tsubure: "border-purple-200",
   sakai: "border-c-sakai/30",
   hosoma: "border-c-hosoma/30",
 };
 
 const underlineColor: Record<string, string> = {
-  tezuka: "decoration-c-tezuka/70",
-  dracom: "decoration-sky-300/70",
-  sakata: "decoration-amber-300/70",
-  slopes: "decoration-c-slopes/70",
-  tsubure: "decoration-purple-300/70",
-  sakai: "decoration-c-sakai/70",
-  hosoma: "decoration-c-hosoma/70",
+  tezuka: "decoration-c-tezuka",
+  dracom: "decoration-c-dracom",
+  sakata: "decoration-amber-300",
+  slopes: "decoration-c-slopes",
+  tsubure: "decoration-purple-300",
+  sakai: "decoration-c-sakai",
+  hosoma: "decoration-c-hosoma",
 };
 
 type Props = {
