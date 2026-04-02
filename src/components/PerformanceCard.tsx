@@ -5,14 +5,14 @@ import { FallbackImage } from "./FallbackImage";
 
 const tilts = ["-rotate-2", "-rotate-1", "rotate-1", "rotate-2", "-rotate-1", "-rotate-2", "rotate-2"];
 
-const borderColor: Record<string, string> = {
-  tezuka: "border-rose-200",
-  dracom: "border-sky-200",
-  sakata: "border-amber-200",
-  slopes: "border-emerald-200",
-  tsubure: "border-purple-200",
-  sakai: "border-pink-200",
-  hosoma: "border-indigo-200",
+const underlineColor: Record<string, string> = {
+  tezuka: "decoration-rose-400",
+  dracom: "decoration-sky-400",
+  sakata: "decoration-amber-400",
+  slopes: "decoration-emerald-400",
+  tsubure: "decoration-purple-400",
+  sakai: "decoration-pink-400",
+  hosoma: "decoration-indigo-400",
 };
 
 type Props = {
@@ -26,12 +26,12 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
   const imageSrc =
     performance.image || `/images/programs/${performance.id}.jpg`;
 
-  const border = borderColor[performance.id] || "border-gray-300";
+  const underline = underlineColor[performance.id] || "";
 
   return (
     <Link
       href={`/program/${performance.id}`}
-      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-2 ${border} ${tilt} hover:rotate-0`}
+      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-2 border-black ${tilt} hover:rotate-0`}
     >
       <div className="aspect-[4/3] relative bg-black/5 overflow-hidden">
         <FallbackImage
@@ -43,7 +43,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
         />
       </div>
       <div className="p-4 space-y-2">
-        <p className="text-xs text-black font-bold">
+        <p className={`text-xs text-black font-bold underline decoration-2 underline-offset-2 ${underline}`}>
           {performance.artist}
         </p>
         <h3 className="text-lg font-bold leading-tight">
