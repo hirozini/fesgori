@@ -6,6 +6,10 @@
   --color-black: #1a1a1a;
   --font-sans: "Noto Sans JP", sans-serif;
   --font-serif: "Noto Sans JP", sans-serif;
+  --color-c-tezuka: #FF4629;
+  --color-c-slopes: #006229;
+  --color-c-sakai: #866B67;
+  --color-c-hosoma: #A3CA6D;
 }
 
 h1, h2, h3, h4 {
