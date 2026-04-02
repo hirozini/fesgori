@@ -44,7 +44,7 @@ export default async function ProgramDetailPage({ params }: Props) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       {/* Main image */}
-      <div className="aspect-[16/9] relative bg-black/5 rounded-lg overflow-hidden mb-8 border-2 border-yellow">
+      <div className="aspect-[16/9] relative bg-black/5 rounded-lg overflow-hidden mb-8">
         <FallbackImage
           src={imageSrc}
           alt={p.title}
