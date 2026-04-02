@@ -5,6 +5,16 @@ import { FallbackImage } from "./FallbackImage";
 
 const tilts = ["rotate-1", "-rotate-1", "rotate-2", "-rotate-2", "rotate-1", "-rotate-1", "rotate-2"];
 
+const borderColor: Record<string, string> = {
+  tezuka: "border-rose-400",
+  dracom: "border-sky-400",
+  sakata: "border-amber-400",
+  slopes: "border-emerald-400",
+  tsubure: "border-purple-400",
+  sakai: "border-pink-400",
+  hosoma: "border-indigo-400",
+};
+
 type Props = {
   performance: Performance;
   index?: number;
@@ -16,10 +26,12 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
   const imageSrc =
     performance.image || `/images/programs/${performance.id}.jpg`;
 
+  const border = borderColor[performance.id] || "border-gray-300";
+
   return (
     <Link
       href={`/program/${performance.id}`}
-      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${tilt} hover:rotate-0`}
+      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-2 ${border} ${tilt} hover:rotate-0`}
     >
       <div className="aspect-[4/3] relative bg-black/5 overflow-hidden">
         <FallbackImage
