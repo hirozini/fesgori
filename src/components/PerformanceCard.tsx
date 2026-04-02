@@ -6,23 +6,23 @@ import { FallbackImage } from "./FallbackImage";
 const tilts = ["-rotate-2", "rotate-1", "rotate-1", "-rotate-2", "-rotate-1", "rotate-1", "rotate-2"];
 
 const borderColor: Record<string, string> = {
-  tezuka: "border-rose-100",
-  dracom: "border-sky-100",
-  sakata: "border-amber-100",
-  slopes: "border-emerald-100",
-  tsubure: "border-purple-100",
-  sakai: "border-pink-100",
-  hosoma: "border-indigo-100",
+  tezuka: "border-rose-200/60",
+  dracom: "border-sky-200/60",
+  sakata: "border-amber-200/60",
+  slopes: "border-emerald-200/60",
+  tsubure: "border-purple-200/60",
+  sakai: "border-pink-200/60",
+  hosoma: "border-indigo-200/60",
 };
 
 const underlineColor: Record<string, string> = {
-  tezuka: "decoration-rose-300",
-  dracom: "decoration-sky-300",
-  sakata: "decoration-amber-300",
-  slopes: "decoration-emerald-300",
-  tsubure: "decoration-purple-300",
-  sakai: "decoration-pink-300",
-  hosoma: "decoration-indigo-300",
+  tezuka: "decoration-rose-300/70",
+  dracom: "decoration-sky-300/70",
+  sakata: "decoration-amber-300/70",
+  slopes: "decoration-emerald-300/70",
+  tsubure: "decoration-purple-300/70",
+  sakai: "decoration-pink-300/70",
+  hosoma: "decoration-indigo-300/70",
 };
 
 type Props = {
