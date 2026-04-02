@@ -7,13 +7,13 @@ export const metadata: Metadata = {
 };
 
 const underlineColor: Record<string, string> = {
-  tezuka: "decoration-stone-400",
-  dracom: "decoration-slate-400",
-  sakata: "decoration-amber-300",
-  slopes: "decoration-teal-300",
-  tsubure: "decoration-zinc-400",
-  sakai: "decoration-rose-300",
-  hosoma: "decoration-slate-500",
+  tezuka: "decoration-rose-400",
+  dracom: "decoration-sky-400",
+  sakata: "decoration-amber-400",
+  slopes: "decoration-emerald-400",
+  tsubure: "decoration-purple-400",
+  sakai: "decoration-pink-400",
+  hosoma: "decoration-indigo-400",
 };
 
 function getTimeSlots(): string[] {
