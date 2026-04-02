@@ -26,12 +26,10 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
   const imageSrc =
     performance.image || `/images/programs/${performance.id}.jpg`;
 
-  const border = borderColor[performance.id] || "border-gray-300";
-
   return (
     <Link
       href={`/program/${performance.id}`}
-      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-2 ${border} ${tilt} hover:rotate-0`}
+      className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-black/10 ${tilt} hover:rotate-0`}
     >
       <div className="aspect-[4/3] relative bg-black/5 overflow-hidden">
         <FallbackImage
