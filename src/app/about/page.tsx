@@ -19,7 +19,7 @@ export default function AboutPage() {
         {/* Overview */}
         <section>
           <p className="text-xl md:text-2xl font-bold leading-relaxed mb-8">
-            「わかってくれてよかった」――そう先に言っておくことでみんなが共有できるようになるものがある。しびれるほど楽しい「上演」たちが一堂に会する6月はじめの一週間！
+            <span className="inline-block border-b-3 border-yellow">「わかってくれてよかった」</span>――そう先に言っておくことでみんなが共有できるようになるものがある。しびれるほど楽しい「上演」たちが一堂に会する6月はじめの一週間！
           </p>
           <p className="text-base leading-relaxed">{festival.overview}</p>
         </section>
