@@ -3,7 +3,7 @@ import type { Performance } from "@/lib/festival";
 import { getVenue } from "@/lib/festival";
 import { FallbackImage } from "./FallbackImage";
 
-const tilts = ["-rotate-2", "rotate-1", "rotate-3", "-rotate-1", "-rotate-3", "rotate-2", "-rotate-1"];
+const tilts = ["rotate-2", "-rotate-3", "-rotate-1", "rotate-3", "rotate-1", "-rotate-2", "rotate-2"];
 
 const borderColor: Record<string, string> = {
   tezuka: "border-stone-300",
