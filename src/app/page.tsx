@@ -14,7 +14,7 @@ export default function Home() {
           alt={festival.name}
           width={1200}
           height={800}
-          className="hidden md:block w-full max-w-4xl h-auto object-contain md:max-h-[calc(100vh-14rem)]"
+          className="hidden md:block w-full max-w-6xl h-auto object-contain md:max-h-[calc(100vh-14rem)]"
           priority
         />
         <Image
@@ -30,7 +30,7 @@ export default function Home() {
           alt={`${festival.name} タイトル`}
           width={800}
           height={200}
-          className="w-full max-w-2xl h-auto mt-4 shrink-0"
+          className="w-full max-w-3xl h-auto mt-4 shrink-0"
         />
       </div>
 
