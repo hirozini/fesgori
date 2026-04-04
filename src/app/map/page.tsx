@@ -39,6 +39,16 @@ export default function MapPage() {
               <p className="text-sm text-black/60 whitespace-pre-wrap">
                 {venue.address}
               </p>
+              {venue.id === "sabaco" && (
+                <a
+                  href="https://sabaco.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-1 text-sm text-black/60 underline hover:text-black"
+                >
+                  https://sabaco.jp/
+                </a>
+              )}
               {venuePerformances.length > 0 && (
                 <div className="mt-4 pt-3 border-t border-black/10">
                   <p className="text-xs text-black/40 font-bold mb-2">
