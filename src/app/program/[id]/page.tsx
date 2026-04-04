@@ -4,6 +4,13 @@ import { FallbackImage } from "@/components/FallbackImage";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+const artistNameEn: Record<string, string> = {
+  tezuka: "Natsuko Tezuka",
+  sakata: "Ritsuko Sakata",
+  slopes: "slopes (Junichiro Ibe+Kazumichi Komatsu)",
+  hosoma: "Hiromichi Hosoma",
+};
+
 const underlineColor: Record<string, string> = {
   tezuka: "decoration-c-tezuka",
   dracom: "decoration-c-dracom",
@@ -186,7 +193,12 @@ export default async function ProgramDetailPage({ params }: Props) {
               />
             </div>
             <div className="space-y-2">
-              <p className="text-sm font-bold">{p.artist}</p>
+              <p className="text-sm font-bold">
+                {p.artist}
+                {artistNameEn[p.id] && (
+                  <span className="ml-2 text-xs text-black/30 font-normal">{artistNameEn[p.id]}</span>
+                )}
+              </p>
               <p className="text-sm leading-relaxed whitespace-pre-wrap">
                 {p.profile}
               </p>
