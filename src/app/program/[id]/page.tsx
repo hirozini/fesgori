@@ -151,7 +151,15 @@ export default async function ProgramDetailPage({ params }: Props) {
                 <dt className="text-black/50 min-w-[6em] shrink-0">
                   {row.label}
                 </dt>
-                <dd className="whitespace-pre-wrap">{row.value}</dd>
+                <dd className="whitespace-pre-wrap">
+                  {String(row.value).includes("★")
+                    ? String(row.value).split("\n").map((line, i) => (
+                        <span key={i} className={line.startsWith("★") ? "text-xs text-black/60" : ""}>
+                          {i > 0 && "\n"}{line}
+                        </span>
+                      ))
+                    : row.value}
+                </dd>
               </div>
             ))}
         </dl>
