@@ -236,6 +236,12 @@ export default async function ProgramDetailPage({ params }: Props) {
           <p className="text-sm text-black/60 whitespace-pre-wrap mt-1">
             {venue.address}
           </p>
+          {venue.id === "sabaco" && (
+            <a href="https://sabaco.jp/" target="_blank" rel="noopener noreferrer" className="inline-block mt-1 text-sm text-black/60 underline hover:text-black">https://sabaco.jp/</a>
+          )}
+          {venue.id === "dorama" && (
+            <a href="https://www.waseda.jp/culture/dramakan/" target="_blank" rel="noopener noreferrer" className="inline-block mt-1 text-sm text-black/60 underline hover:text-black">https://www.waseda.jp/culture/dramakan/</a>
+          )}
           <div className="rounded-lg overflow-hidden mt-4 w-full" style={{ height: "300px" }}>
             <iframe
               src={`https://www.google.com/maps?q=${encodeURIComponent(venue.id === "gcc" ? "東京都新宿区戸塚町1丁目103-18" : venue.name)}&output=embed&hl=ja&z=16`}
