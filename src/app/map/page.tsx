@@ -39,6 +39,16 @@ export default function MapPage() {
               <p className="text-sm text-black/60 whitespace-pre-wrap">
                 {venue.address}
               </p>
+              {venue.id === "dorama" && (
+                <a
+                  href="https://www.waseda.jp/culture/dramakan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-1 text-sm text-black/60 underline hover:text-black"
+                >
+                  https://www.waseda.jp/culture/dramakan/
+                </a>
+              )}
               {venue.id === "sabaco" && (
                 <a
                   href="https://sabaco.jp/"
