@@ -183,12 +183,12 @@ export default async function ProgramDetailPage({ params }: Props) {
         <div className="mb-10">
           <h2 className="text-lg font-bold mb-4">プロフィール</h2>
           <div className="flex flex-col md:flex-row gap-6">
-            <div className="w-32 h-32 relative bg-black rounded-lg overflow-hidden shrink-0">
+            <div className="w-32 h-32 relative bg-black/5 rounded-lg overflow-hidden shrink-0">
               <FallbackImage
                 src={profileImageSrc}
                 alt={p.artist}
                 fill
-                className="object-contain"
+                className="object-cover object-center"
                 sizes="128px"
               />
             </div>
