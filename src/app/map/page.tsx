@@ -1,6 +1,16 @@
 import { venues, performances } from "@/lib/festival";
 import type { Metadata } from "next";
 
+const underlineColor: Record<string, string> = {
+  tezuka: "decoration-c-tezuka",
+  dracom: "decoration-c-dracom",
+  sakata: "decoration-amber-400",
+  slopes: "decoration-c-slopes",
+  tsubure: "decoration-purple-400",
+  sakai: "decoration-c-sakai",
+  hosoma: "decoration-c-hosoma",
+};
+
 export const metadata: Metadata = {
   title: "ACCESS — フェスティバルご理解ありがとうございます",
 };
@@ -69,7 +79,7 @@ export default function MapPage() {
                       <li key={p.id}>
                         <a
                           href={`/program/${p.id}`}
-                          className="text-sm hover:underline"
+                          className={`text-sm underline decoration-2 underline-offset-2 hover:opacity-60 ${underlineColor[p.id] || ""}`}
                         >
                           {p.artist}『{p.title}』
                         </a>
