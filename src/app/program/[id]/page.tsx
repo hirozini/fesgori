@@ -172,7 +172,18 @@ export default async function ProgramDetailPage({ params }: Props) {
           )}
           {p.accessibility && (
             <div className="bg-black/5 border border-black/10 rounded-lg p-4">
-              <p className="text-sm whitespace-pre-wrap">{p.accessibility}</p>
+              <p className="text-sm whitespace-pre-wrap">
+                {p.accessibility.split("fesgori@example.com").map((part, i, arr) =>
+                  i < arr.length - 1 ? (
+                    <span key={i}>
+                      {part}
+                      <a href="mailto:fesgori@example.com" className="underline hover:text-black/70">fesgori@example.com</a>
+                    </span>
+                  ) : (
+                    <span key={i}>{part}</span>
+                  )
+                )}
+              </p>
             </div>
           )}
         </div>
