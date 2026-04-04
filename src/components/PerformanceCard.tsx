@@ -6,13 +6,13 @@ import { FallbackImage } from "./FallbackImage";
 const tilts = ["-rotate-2", "rotate-1", "rotate-1", "-rotate-2", "rotate-1", "rotate-1", "-rotate-2"];
 
 const borderColor: Record<string, string> = {
-  tezuka: "border-c-tezuka/30",
-  dracom: "border-c-dracom/30",
-  sakata: "border-amber-200",
-  slopes: "border-c-slopes/30",
-  tsubure: "border-purple-200",
-  sakai: "border-c-sakai/30",
-  hosoma: "border-c-hosoma/30",
+  tezuka: "border-c-tezuka/60",
+  dracom: "border-c-dracom/60",
+  sakata: "border-amber-400",
+  slopes: "border-c-slopes/60",
+  tsubure: "border-purple-400",
+  sakai: "border-c-sakai/60",
+  hosoma: "border-c-hosoma/60",
 };
 
 const underlineColor: Record<string, string> = {
