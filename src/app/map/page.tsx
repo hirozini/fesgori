@@ -79,7 +79,7 @@ export default function MapPage() {
                       <li key={p.id}>
                         <a
                           href={`/program/${p.id}`}
-                          className={`text-sm underline decoration-2 underline-offset-2 hover:opacity-60 ${underlineColor[p.id] || ""}`}
+                          className="text-sm hover:underline"
                         >
                           {p.artist}『{p.title}』
                         </a>

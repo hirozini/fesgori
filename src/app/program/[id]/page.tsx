@@ -205,7 +205,7 @@ export default async function ProgramDetailPage({ params }: Props) {
             </div>
             <div className="space-y-2">
               <p className="text-sm font-bold">
-                {p.artist}
+                {p.id === "sakai" ? "酒井花野" : p.artist}
                 {artistNameEn[p.id] && (
                   <span className="ml-2 text-xs text-black/30 font-normal">{artistNameEn[p.id]}</span>
                 )}
