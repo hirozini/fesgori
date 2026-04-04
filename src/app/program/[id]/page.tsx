@@ -188,7 +188,7 @@ export default async function ProgramDetailPage({ params }: Props) {
                 src={profileImageSrc}
                 alt={p.artist}
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="128px"
               />
             </div>
