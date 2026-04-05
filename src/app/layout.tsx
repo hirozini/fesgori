@@ -87,10 +87,10 @@ export default function RootLayout({
               </p>
               <div className="text-xs text-white/50 space-y-1">
                 <p>企画：{festival.credit.planning}</p>
+                <p>企画協力：{festival.credit.planningCooperation}</p>
                 <p>主催：{festival.credit.organizer}</p>
                 <p>共催：{festival.credit.coOrganizer}</p>
                 <p>協力：{festival.credit.cooperation}</p>
-                <p>企画協力：{festival.credit.planningCooperation}</p>
                 <p>デザイン：山本浩貴＋ｈ（いぬのせなか座）</p>
                 <p>漫画：八津田茂「近所のボランティアの中学生」</p>
               </div>

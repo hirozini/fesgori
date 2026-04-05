@@ -59,6 +59,10 @@ export default function AboutPage() {
               <dd>{festival.credit.planning}</dd>
             </div>
             <div className="flex gap-4">
+              <dt className="text-black/50 min-w-[5em]">企画協力</dt>
+              <dd>{festival.credit.planningCooperation}</dd>
+            </div>
+            <div className="flex gap-4">
               <dt className="text-black/50 min-w-[5em]">主催</dt>
               <dd>{festival.credit.organizer}</dd>
             </div>
@@ -69,10 +73,6 @@ export default function AboutPage() {
             <div className="flex gap-4">
               <dt className="text-black/50 min-w-[5em]">協力</dt>
               <dd>{festival.credit.cooperation}</dd>
-            </div>
-            <div className="flex gap-4">
-              <dt className="text-black/50 min-w-[5em]">企画協力</dt>
-              <dd>{festival.credit.planningCooperation}</dd>
             </div>
             <div className="flex gap-4">
               <dt className="text-black/50 min-w-[5em]">デザイン</dt>
