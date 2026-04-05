@@ -76,13 +76,13 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
             {/* Book cover */}
             <div className="shrink-0 w-[180px] md:w-[240px]">
-              <div className="aspect-[105/148] bg-black/10 rounded overflow-hidden">
+              <div className="border border-black/15">
                 <FallbackImage
                   src="/images/book-cover.jpg"
                   alt="『リンチ（戯曲）――三部作』"
                   width={240}
-                  height={337}
-                  className="w-full h-full object-cover"
+                  height={340}
+                  className="w-full h-auto"
                 />
               </div>
             </div>
