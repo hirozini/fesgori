@@ -8,6 +8,8 @@ const artistNameEn: Record<string, string> = {
   tezuka: "Natsuko Tezuka",
   sakata: "Ritsuko Sakata",
   slopes: "slopes (Junichiro Ibe+Kazumichi Komatsu)",
+  tsubure: "Tsubureso Ichiza",
+  sakai: "Kano Sakai",
   hosoma: "Hiromichi Hosoma",
 };
 
