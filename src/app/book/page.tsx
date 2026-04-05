@@ -16,7 +16,7 @@ export default function BookPage() {
           </span>
         </h1>
 
-        <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
         {/* Book cover */}
         <div className="shrink-0 w-[220px] md:w-[280px]">
           <div className="border border-black/15">
