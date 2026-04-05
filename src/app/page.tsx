@@ -77,7 +77,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-8 items-center md:items-start">
             {/* Book cover */}
-            <div className="shrink-0 w-[220px] md:w-[240px]">
+            <Link href="/book" className="shrink-0 w-[220px] md:w-[240px] block hover:opacity-80 transition-opacity">
               <div className="border border-black/15">
                 <FallbackImage
                   src="/images/book-cover.jpg"
@@ -87,7 +87,7 @@ export default function Home() {
                   className="w-full h-auto"
                 />
               </div>
-            </div>
+            </Link>
             {/* Book info */}
             <div className="text-left space-y-5">
               <div>
