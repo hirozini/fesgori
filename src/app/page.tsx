@@ -70,10 +70,10 @@ export default function Home() {
       {/* Book section */}
       <section className="bg-black/3 border-t border-black/20 border-b border-b-black/20">
         <div className="max-w-4xl mx-auto px-4 py-14">
-          <p className="text-base md:text-base font-bold mb-8">
+          <p className="text-base md:text-base font-bold mb-10">
             <span className="inline-block bg-yellow/40 px-2 py-0.5 rounded border-2 border-black -rotate-1">フェスティバル開催にあわせて刊行！</span>
           </p>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-8 items-center md:items-start">
             {/* Book cover */}
             <div className="shrink-0 w-[220px] md:w-[240px]">
               <div className="border border-black/15">
