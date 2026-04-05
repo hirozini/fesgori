@@ -87,7 +87,7 @@ export default function Home() {
               </div>
             </div>
             {/* Book info */}
-            <div className="text-center md:text-left space-y-5">
+            <div className="text-left space-y-5">
               <div style={{ fontFamily: "var(--font-serif)" }}>
                 <p className="text-base md:text-lg">羽鳥ヨダ嘉郎</p>
                 <p className="text-2xl md:text-3xl font-black leading-tight mt-1">
