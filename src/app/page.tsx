@@ -92,7 +92,7 @@ export default function Home() {
                 <div style={{ fontFamily: "'Noto Serif JP', serif" }}>
                   <p className="text-lg md:text-xl font-black tracking-tighter">羽鳥ヨダ嘉郎</p>
                   <p className="text-3xl md:text-4xl font-black leading-tight mt-1 tracking-tighter" style={{ fontFeatureSettings: '"palt"' }}>
-                    リンチ（戯曲）<span className="text-2xl md:text-3xl">――三部作</span>
+                    リンチ<span className="-mx-1.5">（</span>戯曲<span className="-mx-1.5">）</span><span className="text-2xl md:text-3xl">――三部作</span>
                   </p>
                 </div>
                 <p className="text-sm md:text-sm leading-relaxed font-medium mt-4">
