@@ -88,7 +88,7 @@ export default function Home() {
             </div>
             {/* Book info */}
             <div className="text-left space-y-5">
-              <div style={{ fontFamily: "var(--font-serif)" }}>
+              <div style={{ fontFamily: "'Zen Old Mincho', serif" }}>
                 <p className="text-base md:text-lg">羽鳥ヨダ嘉郎</p>
                 <p className="text-2xl md:text-3xl font-black leading-tight mt-1">
                   『リンチ（戯曲）――三部作』
