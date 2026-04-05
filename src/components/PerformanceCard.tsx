@@ -44,12 +44,12 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
       href={`/program/${performance.id}`}
       className={`group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-2 ${border} ${tilt} hover:rotate-0`}
     >
-      <div className="aspect-[4/3] relative bg-black/5 overflow-hidden">
+      <div className={`aspect-[4/3] relative overflow-hidden ${performance.id === "hosoma" ? "bg-white" : "bg-black/5"}`}>
         <FallbackImage
           src={imageSrc}
           alt={performance.title}
           fill
-          className={`group-hover:scale-105 transition-transform duration-300 ${performance.id === "hosoma" ? "object-contain p-4" : `object-cover ${performance.id === "sakata" ? "object-bottom" : ""}`}`}
+          className={`group-hover:scale-105 transition-transform duration-300 ${performance.id === "hosoma" ? "object-contain p-2" : `object-cover ${performance.id === "sakata" ? "object-bottom" : ""}`}`}
           style={performance.id === "tsubure" ? { objectPosition: "center 15%" } : undefined}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
