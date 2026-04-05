@@ -17,6 +17,7 @@ const navLinks = [
   { href: "/program", label: "PROGRAM" },
   { href: "/timetable", label: "TIMETABLE" },
   { href: "/map", label: "ACCESS" },
+  { href: "/book", label: "BOOK" },
   { href: "mailto:fesgori2026@gmail.com", label: "CONTACT" },
 ];
 
