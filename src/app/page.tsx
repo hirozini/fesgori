@@ -90,8 +90,8 @@ export default function Home() {
             <div className="text-left space-y-5">
               <div>
                 <div style={{ fontFamily: "'Noto Serif JP', serif" }}>
-                  <p className="text-base md:text-lg font-black">羽鳥ヨダ嘉郎</p>
-                  <p className="text-2xl md:text-3xl font-black leading-tight mt-1">
+                  <p className="text-lg md:text-xl font-black tracking-tighter">羽鳥ヨダ嘉郎</p>
+                  <p className="text-3xl md:text-4xl font-black leading-tight mt-1 tracking-tighter">
                     『リンチ（戯曲）――三部作』
                   </p>
                 </div>
