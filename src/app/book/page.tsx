@@ -65,7 +65,7 @@ export default function BookPage() {
               rel="noopener noreferrer"
               className="inline-block bg-emerald-700 text-white px-6 py-2 text-base font-bold rounded hover:opacity-80 transition-opacity"
             >
-              予約はこちら
+              ご予約はこちら
             </a>
           </p>
         </div>
