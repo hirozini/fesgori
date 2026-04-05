@@ -75,7 +75,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
             {/* Book cover */}
-            <div className="shrink-0 w-[180px] md:w-[240px]">
+            <div className="shrink-0 w-[220px] md:w-[240px]">
               <div className="border border-black/15">
                 <FallbackImage
                   src="/images/book-cover.jpg"
