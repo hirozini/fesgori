@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* Book section */}
-      <section className="border-t border-black/20 border-b border-b-black/20">
+      <section className="bg-yellow/25 border-t border-black/20 border-b border-b-black/20">
         <div className="max-w-4xl mx-auto px-4 py-14">
           <p className="text-base md:text-lg font-bold tracking-wider mb-8">
             <span className="inline-block border-b-3 border-yellow">フェスティバル開催にあわせて刊行</span>
