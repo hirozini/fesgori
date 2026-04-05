@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { festival } from "@/lib/festival";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
@@ -21,7 +22,18 @@ export default function AboutPage() {
           <p className="text-xl md:text-2xl font-bold leading-relaxed mb-8">
             <span className="inline-block border-b-3 border-yellow">「わかってくれてよかった」</span>――そう先に言っておくことでみんなが共有できるようになるものがある。しびれるほど楽しい「上演」たちが一堂に会する6月はじめの一週間！
           </p>
-          <p className="text-base leading-relaxed whitespace-pre-wrap">{festival.overview}</p>
+          <p className="text-base leading-relaxed whitespace-pre-wrap">
+            {festival.overview.split("『リンチ（戯曲）――三部作』").map((part, i, arr) =>
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <Link href="/book" className="underline hover:opacity-60">『リンチ（戯曲）――三部作』</Link>
+                </span>
+              ) : (
+                <span key={i}>{part}</span>
+              )
+            )}
+          </p>
         </section>
         {/* Statement */}
         <section>

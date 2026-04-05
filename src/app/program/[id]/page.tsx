@@ -113,25 +113,29 @@ export default async function ProgramDetailPage({ params }: Props) {
       {/* Description */}
       <div className="mb-10">
         <p className="text-base leading-relaxed whitespace-pre-wrap">
-          {p.id === "slopes"
-            ? p.description.split("簡易××式骨声霊承のRVCモデル学習").map((part, i, arr) =>
-                i < arr.length - 1 ? (
-                  <span key={i}>
-                    {part}
-                    <a
-                      href="https://ymy6jnbuwsj7.blog.fc2.com/blog-entry-15.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline text-black/70 hover:text-black"
-                    >
-                      簡易××式骨声霊承のRVCモデル学習
-                    </a>
-                  </span>
-                ) : (
-                  <span key={i}>{part}</span>
-                )
+          {(() => {
+            const linkMap: Record<string, { text: string; href: string; external?: boolean }> = {
+              slopes: { text: "簡易××式骨声霊承のRVCモデル学習", href: "https://ymy6jnbuwsj7.blog.fc2.com/blog-entry-15.html", external: true },
+              tezuka: { text: "羽鳥ヨダ嘉郎「同伴（戯曲）」", href: "/book" },
+              hosoma: { text: "羽鳥ヨダ嘉郎によるAAF戯曲賞受賞作", href: "/book" },
+            };
+            const link = linkMap[p.id];
+            if (!link) return p.description;
+            return p.description.split(link.text).map((part, i, arr) =>
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  {link.external ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="underline text-black/70 hover:text-black">{link.text}</a>
+                  ) : (
+                    <Link href={link.href} className="underline hover:opacity-60">{link.text}</Link>
+                  )}
+                </span>
+              ) : (
+                <span key={i}>{part}</span>
               )
-            : p.description}
+            );
+          })()}
         </p>
       </div>
 
