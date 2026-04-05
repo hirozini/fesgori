@@ -63,7 +63,7 @@ export default function BookPage() {
               href="https://inunosenakaza.stores.jp/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-emerald-100 text-black px-10 py-4 text-base font-bold rounded border-2 border-emerald-700 hover:opacity-80 transition-opacity"
+              className="inline-block bg-emerald-700 text-white px-6 py-2 text-base font-bold rounded hover:opacity-80 transition-opacity"
             >
               予約はこちら
             </a>
@@ -74,16 +74,16 @@ export default function BookPage() {
 
       {/* Description */}
       <div className="max-w-2xl mx-auto mt-16 space-y-8">
-        <p className="text-xl md:text-2xl font-bold leading-relaxed" style={{ fontFamily: "'Noto Serif JP', serif" }}>
-          見ること、触れること、支えることは、いつ暴力になるのか――
+        <p className="text-xl md:text-2xl font-bold leading-relaxed whitespace-pre-wrap" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+          {"見ること、触れること、支えることは、\nいつ暴力になるのか――"}
         </p>
 
-        <div className="space-y-4 text-sm leading-relaxed">
+        <div className="space-y-4 text-sm leading-relaxed whitespace-pre-wrap">
           <p>
-            国家で、共同体で、家で、ゆがみ抗いながら発せられてきた言葉たちが、この感覚を、体を、劇をかたちづくる。
+            {"国家で、共同体で、家で、\nゆがみ抗いながら発せられてきた言葉たちが、\nこの感覚を、体を、劇をかたちづくる。"}
           </p>
           <p>
-            歴史と地形、政治とケア、侵略と生活が苛烈に殺到する「現在」に生み出された戯曲三部作、ついに刊行。
+            {"歴史と地形、政治とケア、侵略と生活が\n苛烈に殺到する「現在」に生み出された\n戯曲三部作、ついに刊行。"}
           </p>
         </div>
 
