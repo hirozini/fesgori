@@ -63,7 +63,7 @@ export default function BookPage() {
               href="https://inunosenakaza.stores.jp/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-yellow text-black px-10 py-4 text-base font-bold rounded hover:opacity-80 transition-opacity"
+              className="inline-block bg-emerald-100 text-black px-10 py-4 text-base font-bold rounded border-2 border-emerald-700 hover:opacity-80 transition-opacity"
             >
               予約はこちら
             </a>
