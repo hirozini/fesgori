@@ -85,13 +85,13 @@ export default function BookPage() {
           </p>
         </div>
 
-        <p className="text-center text-black/30">＊</p>
+        <hr className="border-t border-black/15" />
 
         <p className="text-sm leading-relaxed">
           堺雅人推薦文が入る
         </p>
 
-        <p className="text-center text-black/30">＊</p>
+        <hr className="border-t border-black/15" />
 
         <div className="space-y-4 text-sm leading-relaxed">
           <p className="font-bold">【三部作について】</p>
@@ -100,7 +100,7 @@ export default function BookPage() {
           </p>
         </div>
 
-        <p className="text-center text-black/30">＊</p>
+        <hr className="border-t border-black/15" />
 
         <div className="space-y-4 text-sm leading-relaxed">
           <p className="font-bold">【収録作品】</p>
@@ -124,7 +124,7 @@ export default function BookPage() {
           </div>
         </div>
 
-        <p className="text-center text-black/30">＊</p>
+        <hr className="border-t border-black/15" />
 
         <div className="space-y-2 text-sm leading-relaxed">
           <p className="font-bold">【著者】</p>
