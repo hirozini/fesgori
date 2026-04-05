@@ -70,7 +70,7 @@ export default function Home() {
       {/* Book section */}
       <section className="border-t border-black/20 border-b border-b-black/20">
         <div className="max-w-4xl mx-auto px-4 py-14">
-          <p className="text-xs tracking-widest text-black/40 mb-8">
+          <p className="text-sm md:text-base font-bold tracking-wider mb-8">
             フェスティバル開催にあわせて刊行
           </p>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
@@ -88,16 +88,16 @@ export default function Home() {
             </div>
             {/* Book info */}
             <div className="text-center md:text-left space-y-5">
-              <div className="font-serif">
+              <div style={{ fontFamily: "var(--font-serif)" }}>
                 <p className="text-base md:text-lg">羽鳥ヨダ嘉郎</p>
                 <p className="text-2xl md:text-3xl font-black leading-tight mt-1">
                   『リンチ（戯曲）――三部作』
                 </p>
               </div>
               <p className="text-sm md:text-base leading-relaxed">
-                堺雅人（俳優）推薦！　戯曲と体の歴史を根底から突き詰める、類例のない作品集。
+                堺雅人（俳優）推薦！<br />戯曲と体の歴史を根底から突き詰める、類例のない作品集。
               </p>
-              <p className="text-xs text-black/50 leading-loose">
+              <p className="text-xs text-black leading-loose">
                 いぬのせなか座／2,500円＋税<br />
                 2026年6月5日刊行（予約で先行発送／会場にて先行発売）<br />
                 四六判上製本クロス装　124ページ<br />
@@ -109,7 +109,7 @@ export default function Home() {
                   href="/book"
                   className="text-sm underline text-black/60 hover:text-black transition-opacity"
                 >
-                  予約受付中 → 詳しくはこちら
+                  詳しくはこちら
                 </Link>
               </p>
             </div>
