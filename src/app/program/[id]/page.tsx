@@ -53,12 +53,14 @@ export default async function ProgramDetailPage({ params }: Props) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       {/* Main image */}
-      <div className="aspect-[16/9] relative bg-black/5 rounded-lg overflow-hidden mb-8">
+      <div className={`relative rounded-lg overflow-hidden mb-8 ${p.id === "hosoma" ? "bg-black/5" : "aspect-[16/9] bg-black/5"}`}>
         <FallbackImage
           src={imageSrc}
           alt={p.title}
-          fill
-          className={`object-cover ${p.id === "sakata" || p.id === "sakai" ? "object-bottom" : ""}`}
+          fill={p.id !== "hosoma"}
+          width={p.id === "hosoma" ? 800 : undefined}
+          height={p.id === "hosoma" ? 600 : undefined}
+          className={p.id === "hosoma" ? "w-full h-auto mx-auto" : `object-cover ${p.id === "sakata" || p.id === "sakai" ? "object-bottom" : ""}`}
           style={p.id === "tsubure" ? { objectPosition: "center 35%" } : undefined}
           sizes="(max-width: 768px) 100vw, 800px"
           priority
