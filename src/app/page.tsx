@@ -95,7 +95,7 @@ export default function Home() {
                     リンチ（戯曲）――三部作
                   </p>
                 </div>
-                <p className="text-sm md:text-base leading-relaxed font-medium mt-2">
+                <p className="text-sm md:text-sm leading-relaxed font-medium mt-4">
                   堺雅人（俳優）推薦！<br />戯曲と体の歴史を根底から突き詰める、類例のない作品集。
                 </p>
               </div>
