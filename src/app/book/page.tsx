@@ -53,8 +53,19 @@ export default function BookPage() {
             いぬのせなか座／2,500円＋税<br />
             2026年6月5日刊行（予約で先行発送／会場にて先行発売）<br />
             四六判上製本クロス装　124ページ<br />
+            付録小冊子：平倉圭（芸術学）、細馬宏通（行動学）<br />
             装画：尼子騒兵衛「落第忍者乱太郎」より<br />
-            付録小冊子：平倉圭、細馬宏通
+            装釘・本文レイアウト：山本浩貴＋ｈ（いぬのせなか座）
+          </p>
+          <p>
+            <a
+              href="https://inunosenakaza.stores.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm underline text-black/60 hover:text-black transition-opacity"
+            >
+              予約はこちら
+            </a>
           </p>
         </div>
       </div>
