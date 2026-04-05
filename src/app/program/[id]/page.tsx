@@ -154,9 +154,9 @@ export default async function ProgramDetailPage({ params }: Props) {
                   {row.label}
                 </dt>
                 <dd className="whitespace-pre-wrap">
-                  {String(row.value).includes("★") || String(row.value).includes("※開場")
+                  {String(row.value).includes("★") || String(row.value).includes("※")
                     ? String(row.value).split("\n").map((line, i) => (
-                        <span key={i} className={line.startsWith("★") || line.startsWith("※開場") ? "text-xs" : ""}>
+                        <span key={i} className={line.startsWith("★") || line.startsWith("※") ? "text-xs" : ""}>
                           {i > 0 && "\n"}{line}
                         </span>
                       ))
