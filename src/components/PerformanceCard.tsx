@@ -49,7 +49,7 @@ export function PerformanceCard({ performance, index = 0 }: Props) {
           src={imageSrc}
           alt={performance.title}
           fill
-          className={`object-cover group-hover:scale-105 transition-transform duration-300 ${performance.id === "sakata" ? "object-bottom" : ""}`}
+          className={`object-cover group-hover:scale-105 transition-transform duration-300 ${performance.id === "sakata" || performance.id === "hosoma" ? "object-bottom" : ""}`}
           style={performance.id === "tsubure" ? { objectPosition: "center 15%" } : undefined}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
