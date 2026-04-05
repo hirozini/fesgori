@@ -59,7 +59,7 @@ export default async function ProgramDetailPage({ params }: Props) {
           alt={p.title}
           fill
           className={`object-cover ${p.id === "sakata" || p.id === "sakai" ? "object-bottom" : ""}`}
-          style={p.id === "tsubure" ? { objectPosition: "center 40%" } : undefined}
+          style={p.id === "tsubure" ? { objectPosition: "center 30%" } : undefined}
           sizes="(max-width: 768px) 100vw, 800px"
           priority
         />
