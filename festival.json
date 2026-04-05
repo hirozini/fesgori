@@ -177,7 +177,7 @@
       "catchcopy": "抵抗する問題作を行動学者が演出する",
       "description": "「視聴覚によってわたしを隔離する者に対して、わたしの体性感覚によって抗う劇」？――羽鳥ヨダ嘉郎によるAAF戯曲賞受賞作を前に、細馬宏通が初めて演劇の演出に挑む。『介護するからだ』ではケアの現場における相互行為を、『うたのしくみ』では詞・曲・声・音そして聴き手の心の動きを、あるいは『絵はがきの時代』では身体と画像メディアの関係史を鮮やかに分析する細馬の手によって、「リンチ（戯曲）」は真の姿を現すことだろう。",
       "dates": "6/7（日）, 6/8（月）",
-      "schedule": "（時間未定）\n※開場30分前",
+      "schedule": "6/7（日）19:00-\n6/8（月）14:00- / 19:00-\n※開場30分前",
       "duration": "90分（予定）",
       "venueId": "dorama",
       "price": "¥3,500",
@@ -268,7 +268,10 @@
       { "date": "0607", "time": "14:00", "performanceId": "dracom", "venue": "戸山公園", "duration": 70, "label": "dracom" },
       { "date": "0607", "time": "14:00", "performanceId": "slopes", "venue": "GCC", "duration": 90, "label": "slopes" },
       { "date": "0607", "time": "15:00", "performanceId": "slopes", "venue": "GCC", "duration": 90, "label": "slopes" },
-      { "date": "0607", "time": "17:00", "performanceId": "dracom", "venue": "戸山公園", "duration": 70, "label": "dracom" }
+      { "date": "0607", "time": "17:00", "performanceId": "dracom", "venue": "戸山公園", "duration": 70, "label": "dracom" },
+      { "date": "0607", "time": "19:00", "performanceId": "hosoma", "venue": "どらま館", "duration": 90, "label": "細馬宏通" },
+      { "date": "0608", "time": "14:00", "performanceId": "hosoma", "venue": "どらま館", "duration": 90, "label": "細馬宏通" },
+      { "date": "0608", "time": "19:00", "performanceId": "hosoma", "venue": "どらま館", "duration": 90, "label": "細馬宏通" }
     ]
   }
 }
