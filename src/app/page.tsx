@@ -98,7 +98,7 @@ export default function Home() {
                   </p>
                 </div>
                 <p className="text-sm md:text-sm leading-relaxed font-medium mt-4">
-                  堺雅人（俳優）推薦！<br />戯曲と体の歴史を根底から突き詰める、類例のない作品集。
+                  堺雅人（俳優）推薦！<br />戯曲と体を根底から突き詰める、類例のない作品集。
                 </p>
               </div>
               <p className="text-xs text-black leading-loose">
