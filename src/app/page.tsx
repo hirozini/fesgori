@@ -70,8 +70,8 @@ export default function Home() {
       {/* Book section */}
       <section className="border-t border-black/20 border-b border-b-black/20">
         <div className="max-w-4xl mx-auto px-4 py-14">
-          <p className="text-sm md:text-base font-bold tracking-wider mb-8">
-            フェスティバル開催にあわせて刊行
+          <p className="text-base md:text-lg font-bold tracking-wider mb-8">
+            <span className="inline-block border-b-3 border-yellow">フェスティバル開催にあわせて刊行</span>
           </p>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
             {/* Book cover */}
