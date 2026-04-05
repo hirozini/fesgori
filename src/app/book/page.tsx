@@ -8,14 +8,15 @@ export const metadata: Metadata = {
 
 export default function BookPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-base md:text-xl font-bold mb-10">
-        <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md -rotate-1 border-2 border-black">
-          フェスティバル開催にあわせて刊行！
-        </span>
-      </h1>
+    <div className="px-4 py-12">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-base md:text-xl font-bold mb-10">
+          <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md -rotate-1 border-2 border-black">
+            フェスティバル開催にあわせて刊行！
+          </span>
+        </h1>
 
-      <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="flex flex-col md:flex-row gap-8 items-start">
         {/* Book cover */}
         <div className="shrink-0 w-[220px] md:w-[280px]">
           <div className="border border-black/15">
@@ -68,6 +69,7 @@ export default function BookPage() {
             </a>
           </p>
         </div>
+      </div>
       </div>
 
       {/* Description */}
