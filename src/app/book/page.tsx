@@ -69,6 +69,71 @@ export default function BookPage() {
           </p>
         </div>
       </div>
+
+      {/* Description */}
+      <div className="max-w-2xl mx-auto mt-16 space-y-8">
+        <p className="text-xl md:text-2xl font-bold leading-relaxed" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+          見ること、触れること、支えることは、いつ暴力になるのか――
+        </p>
+
+        <div className="space-y-4 text-sm leading-relaxed">
+          <p>
+            国家で、共同体で、家で、ゆがみ抗いながら発せられてきた言葉たちが、この感覚を、体を、劇をかたちづくる。
+          </p>
+          <p>
+            歴史と地形、政治とケア、侵略と生活が苛烈に殺到する「現在」に生み出された戯曲三部作、ついに刊行。
+          </p>
+        </div>
+
+        <p className="text-center text-black/30">＊</p>
+
+        <p className="text-sm leading-relaxed">
+          堺雅人推薦文が入る
+        </p>
+
+        <p className="text-center text-black/30">＊</p>
+
+        <div className="space-y-4 text-sm leading-relaxed">
+          <p className="font-bold">【三部作について】</p>
+          <p>
+            三つの戯曲は、暴力を受ける身体、見世物にされる身体、手を貸してしまう身体を順にたどりながら、儀礼化・見世物・介助といった社会の技術を解体していく。農村演劇から地政学、民俗、医療、植民地史、介護記録まで、異なる領域・時代・地域の知と苦しみが一つの戯曲のなかに折り畳まれる。言葉は極度に圧縮・断片化され、意味の手前にある感覚と身振りが読む者の体に直接触れながら、いくつかのインフラを露出させていくだろう。戯曲という形式を、さらには人体の経てきた歴史を根底から突き詰める、類例のない作品集。
+          </p>
+        </div>
+
+        <p className="text-center text-black/30">＊</p>
+
+        <div className="space-y-4 text-sm leading-relaxed">
+          <p className="font-bold">【収録作品】</p>
+          <div>
+            <p className="font-bold">「リンチ（戯曲）」</p>
+            <p>
+              小豆島の安田おどり、聖火の沖縄入り、クリオン島のハンセン病患者隔離施設での女子寮襲撃、南洋群島――寝たきりの「お袋」と介護する「素人」のあいだで、帝国に忘却された島々の記憶が圧縮・断片化し、噴き出す。第20回AAF戯曲賞大賞受賞作。
+            </p>
+          </div>
+          <div>
+            <p className="font-bold">「同伴（戯曲）」</p>
+            <p>
+              知念正真の戯曲『人類館』が「さる軍団」たちの鞭と紐と跳躍のなかで再び開かれる。猿まわし、タミル移民、人種握手会、通天閣――観客席もトイレもキッズスペースもすべてが上演内部に取り込まれ、見ることの暴力が見る者自身の知覚のなかで起動する。
+            </p>
+          </div>
+          <div>
+            <p className="font-bold">「加担（戯曲）」</p>
+            <p>
+              農婦、主夫、推し、サポ、同志、パパ。関係名で呼ばれる人物たちの家のなかで、綿ふき病、腎不全看護、満洲の上下水道、ガザの水の武器化、占領下の性暴力が交錯する。ケアと連帯が、暴力と同じインフラの上を流れていく。
+            </p>
+          </div>
+        </div>
+
+        <p className="text-center text-black/30">＊</p>
+
+        <div className="space-y-2 text-sm leading-relaxed">
+          <p className="font-bold">【著者】</p>
+          <p>
+            羽鳥ヨダ嘉郎　<span className="text-xs text-black/50">Yoshiro Yoda Hatori</span><br />
+            「リンチ（戯曲）」で第20回AAF戯曲賞大賞受賞。
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
