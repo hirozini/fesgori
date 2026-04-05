@@ -95,7 +95,7 @@ export default function RootLayout({
                 <p>漫画：八津田茂「近所のボランティアの中学生」</p>
               </div>
               <div className="pt-4 border-t border-white/20 text-xs text-white/40">
-                <p>お問い合わせ：fesgori2026@gmail.com</p>
+                <p>お問い合わせ：<a href="mailto:fesgori2026@gmail.com" className="underline hover:text-white/60">fesgori2026@gmail.com</a></p>
               </div>
             </div>
           </div>
