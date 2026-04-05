@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function BookPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-base md:text-xl font-bold mb-10">
         <span className="inline-block bg-yellow/40 px-3 py-1 rounded-md -rotate-1 border-2 border-black">
           フェスティバル開催にあわせて刊行！
