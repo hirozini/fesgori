@@ -80,7 +80,7 @@ export default function BookPage() {
 
         <div className="space-y-4 text-sm leading-relaxed whitespace-pre-wrap">
           <p>
-            {"国家で、共同体で、家で、\nゆがみ抗いながら発せられてきた言葉たちが、\nこの感覚を、体を、劇をかたちづくる。"}
+            {"国家で、共同体で、家で\nゆがみ抗いながら発せられてきた言葉たちが\nこの感覚を、体を、劇をかたちづくる。"}
           </p>
           <p>
             {"歴史と地形、政治とケア、侵略と生活が\n苛烈に殺到する「現在」に生み出された\n戯曲三部作、ついに刊行。"}
