@@ -51,7 +51,7 @@ export default function BookPage() {
           </p>
 
           <p className="text-xs text-black leading-loose">
-            いぬのせなか座／2,500円＋税<br />
+            いぬのせなか座／2,500円＋税　ISBN：978-4-911308-09-7<br />
             2026年6月5日刊行（予約で先行発送／会場にて先行発売）<br />
             四六判上製本クロス装　題箋貼り　124ページ<br />
             付録小冊子：平倉圭（芸術学）、細馬宏通（行動学）<br />
