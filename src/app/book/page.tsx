@@ -89,9 +89,10 @@ export default function BookPage() {
 
         <hr className="border-t border-black/15" />
 
-        <p className="text-sm leading-relaxed">
-          堺雅人推薦文が入る
-        </p>
+        <div className="text-sm leading-relaxed whitespace-pre-wrap">
+          <p className="font-bold mb-2">◯堺雅人（俳優）</p>
+          <p>{"　この戯曲、僕はとてもじゃないが、ひとりで読めない。どんな声で、なにを思って喋ればいいか、わからないのだ。そもそも声にだして読んでいいセリフなのかも、わからない。\n　言葉の奥に劇的な世界がひろがっている予感がする。気になる。読みたい。理解したい。でも、本当によくわからない。\n　ここに書かれているのは、多分、仲間を必要とする言葉だ。ひとりでなく、みんなで読む文章。読んでいると、すぐに誰かの意見を聞きたくなる。自分の疑問をきいてほしくなる。調べたことを、だれかに話してみたくなる。みんなで相談したくなる。\n　この文章は、だから、ものすごく「演劇の言葉」なんだと思う。よみだした瞬間から、作劇は始まっているのだ、多分。"}</p>
+        </div>
 
         <hr className="border-t border-black/15" />
 
