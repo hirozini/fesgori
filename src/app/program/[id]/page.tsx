@@ -100,9 +100,9 @@ export default async function ProgramDetailPage({ params }: Props) {
           href={p.quartetUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-black text-yellow px-10 py-4 text-base font-bold rounded hover:opacity-80 transition-opacity mb-10"
+          className="inline-block bg-emerald-700 text-white px-6 py-2 text-base font-bold rounded hover:opacity-80 transition-opacity mb-10"
         >
-          予約する
+          ご予約はこちら
         </a>
       ) : (
         <p className="inline-block bg-black/10 text-black/40 px-10 py-4 text-base font-bold rounded mb-10">
