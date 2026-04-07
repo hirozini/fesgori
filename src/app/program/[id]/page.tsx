@@ -31,13 +31,33 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
+const ogExtension: Record<string, string> = {
+  tezuka: "png",
+  dracom: "jpg",
+  sakata: "jpg",
+  slopes: "jpg",
+  tsubure: "jpg",
+  sakai: "jpg",
+  hosoma: "jpg",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const p = performances.find((p) => p.id === id);
+  const ogImage = `/images/og/${id}.${ogExtension[id] || "jpg"}`;
   return {
     title: p
       ? `${p.title} — フェスティバルご理解ありがとうございます`
       : "Not Found",
+    openGraph: p ? {
+      title: `${p.artist}『${p.title}』`,
+      description: p.catchcopy,
+      images: [{ url: ogImage }],
+    } : undefined,
+    twitter: p ? {
+      card: "summary_large_image",
+      images: [ogImage],
+    } : undefined,
   };
 }
 
