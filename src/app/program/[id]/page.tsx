@@ -104,6 +104,10 @@ export default async function ProgramDetailPage({ params }: Props) {
         >
           ご予約はこちら
         </a>
+      ) : p.id === "sakata" ? (
+        <p className="inline-block bg-yellow/40 text-black px-6 py-2 text-base font-bold rounded mb-10">
+          予約不要／当日券のみ
+        </p>
       ) : (
         <p className="inline-block bg-black/10 text-black/40 px-10 py-4 text-base font-bold rounded mb-10">
           予約準備中
