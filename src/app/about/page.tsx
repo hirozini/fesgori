@@ -87,12 +87,12 @@ export default function AboutPage() {
               <dd>{festival.credit.cooperation}</dd>
             </div>
             <div className="flex gap-4">
-              <dt className="text-black/50 min-w-[5em]">デザイン</dt>
-              <dd>山本浩貴＋ｈ（いぬのせなか座）</dd>
-            </div>
-            <div className="flex gap-4">
               <dt className="text-black/50 min-w-[5em]">漫画・題字</dt>
               <dd>八津田茂</dd>
+            </div>
+            <div className="flex gap-4">
+              <dt className="text-black/50 min-w-[5em]">デザイン</dt>
+              <dd>山本浩貴＋ｈ（いぬのせなか座）</dd>
             </div>
           </dl>
         </section>
