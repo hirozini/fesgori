@@ -149,7 +149,7 @@ export default function BookPage() {
       </div>
 
       {/* Novel section */}
-      <div className="max-w-3xl mx-auto md:pl-12 mt-20">
+      <div className="max-w-3xl mx-auto md:pl-12 mt-28">
         <h2 className="text-sm md:text-base font-bold mb-10">
           <span className="inline-block bg-yellow/40 px-2 py-0.5 rounded border-2 border-black -rotate-1">
             同時刊行
