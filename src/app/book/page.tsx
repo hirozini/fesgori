@@ -147,6 +147,86 @@ export default function BookPage() {
           </p>
         </div>
       </div>
+
+      {/* Novel section */}
+      <div className="max-w-3xl mx-auto mt-20">
+        <h2 className="text-sm md:text-base font-bold mb-10">
+          <span className="inline-block bg-yellow/40 px-2 py-0.5 rounded border-2 border-black rotate-1">
+            同時刊行
+          </span>
+        </h2>
+
+        <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+          {/* Novel cover */}
+          <div className="shrink-0 w-[180px] md:w-[220px]">
+            <div className="border border-black/15">
+              <FallbackImage
+                src="/images/book-cover-novel.jpg"
+                alt="リンチ（小説）"
+                width={220}
+                height={310}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Novel info */}
+          <div className="text-left space-y-5">
+            <div style={{ fontFamily: "'Noto Serif JP', serif" }}>
+              <p className="text-base md:text-lg font-black tracking-tighter">
+                羽鳥ヨダ嘉郎
+              </p>
+              <p
+                className="text-2xl md:text-3xl font-black leading-tight mt-1 tracking-tighter"
+                style={{ fontFeatureSettings: '"palt"' }}
+              >
+                リンチ<span className="-ml-1.5">（</span>小説<span className="-mr-1.5">）</span>
+              </p>
+            </div>
+
+            <p className="text-xs text-black leading-loose">
+              いぬのせなか座／初刷限定価格1,000円（税込）<br />
+              2026年6月5日刊行（予約で先行発送／会場にて先行発売）<br />
+              並製　B6　80ページ（予定）<br />
+              装釘・本文レイアウト：山本浩貴＋ｈ（いぬのせなか座）<br />
+              ※書影は制作中のものです
+            </p>
+
+            <p>
+              <a
+                href="https://inunosenakaza.stores.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-emerald-700 text-white px-6 py-2 text-base font-bold rounded hover:opacity-80 transition-opacity"
+              >
+                ご予約はこちら
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* Novel description */}
+        <div className="max-w-2xl mx-auto mt-12 space-y-8">
+          <p className="text-base md:text-lg font-bold leading-relaxed">
+            「リンチ（戯曲）」を読む。語り合う。上演を想像する。<br />
+            その過程が生み出した、もうひとつの「リンチ」。
+          </p>
+
+          <hr className="border-t border-black/15" />
+
+          <div className="space-y-4 text-sm leading-relaxed whitespace-pre-wrap">
+            <p>
+              {"ある日、ある場所に集まった幾人かの人々が「リンチ（戯曲）」を読み進める。\n「素人」「お袋」「和船」「待っていた人」「グヮン」「野次」「絵が来ちゃう」といった言葉たちを拾い上げ、戸惑い、考え、やってみ、確かめ合いながら、介助、入浴、排泄、痛み、チューブ、視線、触れることといった様々を少しずつ立ち上げていく。\n小豆島の安田おどり、聖火、ミレーの絵、ポル・ポト、沖縄、済州島、領土や戦争の記憶は、戯曲の台詞と結びつきながら何度も呼び戻される。"}
+            </p>
+            <p>
+              {"そこで問われるのは、単なる「正しい解釈」ではない。\n誰が話しているのか。何がト書きで、何が内語なのか。\nどこまでが舞台上の出来事で、どこからが夢や回想なのか。\nそしてそれをどう演じうるのか――それらは読みのたびに揺れつづける。"}
+            </p>
+            <p>
+              {"次第に人々の声や身振りもまた作品の内部へ入り込み、この集まりそのものが、批評でも記録でもない、別の一篇の「小説」へと変わっていく。\n約4万字の分量で描かれた固有の場、もうひとつの「リンチ」として。"}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
