@@ -41,7 +41,7 @@ export default function TimetablePage() {
               {timetable.dates.map((d) => (
                 <th
                   key={d.key}
-                  className="p-3 text-left border-b-2 border-black/20 min-w-[120px]"
+                  className="p-3 text-left border-b-2 border-black/20 border-l border-dashed border-l-black/15 min-w-[120px]"
                 >
                   {d.label}
                 </th>
@@ -59,7 +59,7 @@ export default function TimetablePage() {
                     (e) => e.date === d.key && e.time === time
                   );
                   return (
-                    <td key={d.key} className="p-2 align-top">
+                    <td key={d.key} className="p-2 align-top border-l border-dashed border-l-black/15">
                       <div className={events.length > 1 ? "flex gap-3" : ""}>
                         {events.map((ev, i) => (
                           <Link
