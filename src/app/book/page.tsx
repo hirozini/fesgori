@@ -4,6 +4,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "BOOK — フェスティバルご理解ありがとうございます",
+  openGraph: {
+    title: "羽鳥ヨダ嘉郎『リンチ（戯曲）――三部作』",
+    description: "堺雅人（俳優）推薦！ 戯曲と体を根底から突き詰める、類例のない作品集。",
+    images: [{ url: "/images/og/book.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og/book.jpg"],
+  },
 };
 
 export default function BookPage() {
