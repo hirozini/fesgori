@@ -206,7 +206,7 @@ export default function BookPage() {
         </div>
 
         {/* Novel description */}
-        <div className="max-w-2xl mx-auto mt-12 space-y-8">
+        <div className="max-w-2xl mt-12 space-y-8">
           <p className="text-base md:text-lg font-bold leading-relaxed">
             「リンチ（戯曲）」を読む。語り合う。上演を想像する。<br />
             その過程が生み出した、もうひとつの「リンチ」。
