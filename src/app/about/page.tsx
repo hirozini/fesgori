@@ -91,8 +91,8 @@ export default function AboutPage() {
               <dd>山本浩貴＋ｈ（いぬのせなか座）</dd>
             </div>
             <div className="flex gap-4">
-              <dt className="text-black/50 min-w-[5em]">漫画</dt>
-              <dd>八津田茂「近所のボランティアの中学生」</dd>
+              <dt className="text-black/50 min-w-[5em]">漫画・題字</dt>
+              <dd>八津田茂</dd>
             </div>
           </dl>
         </section>
