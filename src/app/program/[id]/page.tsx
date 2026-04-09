@@ -66,6 +66,15 @@ export default async function ProgramDetailPage({ params }: Props) {
   const p = performances.find((perf) => perf.id === id);
   if (!p) notFound();
 
+  const linksMap: Record<string, { text: string; href: string; external?: boolean }[]> = {
+    slopes: [
+      { text: "簡易××式骨声霊承のRVCモデル学習", href: "https://ymy6jnbuwsj7.blog.fc2.com/blog-entry-15.html", external: true },
+      { text: "音声・からだ・モジューレーション", href: "https://www.waseda.jp/culture/dramakan/news/9240", external: true },
+    ],
+    tezuka: [{ text: "羽鳥ヨダ嘉郎「同伴（戯曲）」", href: "/book" }],
+    hosoma: [{ text: "羽鳥ヨダ嘉郎によるAAF戯曲賞受賞作", href: "/book" }],
+  };
+
   const venue = getVenue(p.venueId);
   const imageSrc = p.image || `/images/programs/${p.id}.jpg`;
   const profileImageSrc = p.profileImage || `/images/profiles/${p.id}.jpg`;
@@ -136,21 +145,13 @@ export default async function ProgramDetailPage({ params }: Props) {
 
       {/* Description */}
       <div className="mb-10">
-        <p className="text-base leading-relaxed whitespace-pre-wrap">
-          {(() => {
-            const linksMap: Record<string, { text: string; href: string; external?: boolean }[]> = {
-              slopes: [
-                { text: "簡易××式骨声霊承のRVCモデル学習", href: "https://ymy6jnbuwsj7.blog.fc2.com/blog-entry-15.html", external: true },
-                { text: "音声・からだ・モジューレーション", href: "https://www.waseda.jp/culture/dramakan/news/9240", external: true },
-              ],
-              tezuka: [{ text: "羽鳥ヨダ嘉郎「同伴（戯曲）」", href: "/book" }],
-              hosoma: [{ text: "羽鳥ヨダ嘉郎によるAAF戯曲賞受賞作", href: "/book" }],
-            };
-            const links = linksMap[p.id];
-            if (!links) return p.description;
-            let parts: (string | React.ReactElement)[] = [p.description];
+        {p.description.split("\n").map((line, lineIdx) => {
+          const isSmall = line.startsWith("※");
+          const links = linksMap[p.id];
+          let content: (string | React.ReactElement)[] = [line];
+          if (links) {
             links.forEach((link) => {
-              parts = parts.flatMap((part) => {
+              content = content.flatMap((part) => {
                 if (typeof part !== "string") return [part];
                 const split = part.split(link.text);
                 if (split.length === 1) return [part];
@@ -159,9 +160,9 @@ export default async function ProgramDetailPage({ params }: Props) {
                   if (i > 0) {
                     result.push(
                       link.external ? (
-                        <a key={`${link.text}-${i}`} href={link.href} target="_blank" rel="noopener noreferrer" className="underline text-black/70 hover:text-black">{link.text}</a>
+                        <a key={`${link.text}-${lineIdx}-${i}`} href={link.href} target="_blank" rel="noopener noreferrer" className="underline text-black/70 hover:text-black">{link.text}</a>
                       ) : (
-                        <Link key={`${link.text}-${i}`} href={link.href} className="underline hover:opacity-60">{link.text}</Link>
+                        <Link key={`${link.text}-${lineIdx}-${i}`} href={link.href} className="underline hover:opacity-60">{link.text}</Link>
                       )
                     );
                   }
@@ -170,9 +171,13 @@ export default async function ProgramDetailPage({ params }: Props) {
                 return result;
               });
             });
-            return parts;
-          })()}
-        </p>
+          }
+          return (
+            <p key={lineIdx} className={`leading-relaxed ${isSmall ? "text-xs mt-2" : "text-base"}`}>
+              {content}
+            </p>
+          );
+        })}
       </div>
 
       {/* Info table */}
