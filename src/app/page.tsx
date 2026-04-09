@@ -113,7 +113,7 @@ export default function Home() {
               <p>
                 <Link
                   href="/book"
-                  className="inline-block bg-yellow/40 text-black px-4 py-1.5 text-xs font-bold rounded hover:opacity-80 transition-opacity"
+                  className="inline-block bg-yellow/40 text-black px-6 py-2.5 text-xs font-bold rounded hover:opacity-80 transition-opacity"
                 >
                   詳しくはこちら
                 </Link>
