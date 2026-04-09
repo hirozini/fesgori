@@ -138,27 +138,39 @@ export default async function ProgramDetailPage({ params }: Props) {
       <div className="mb-10">
         <p className="text-base leading-relaxed whitespace-pre-wrap">
           {(() => {
-            const linkMap: Record<string, { text: string; href: string; external?: boolean }> = {
-              slopes: { text: "簡易××式骨声霊承のRVCモデル学習", href: "https://ymy6jnbuwsj7.blog.fc2.com/blog-entry-15.html", external: true },
-              tezuka: { text: "羽鳥ヨダ嘉郎「同伴（戯曲）」", href: "/book" },
-              hosoma: { text: "羽鳥ヨダ嘉郎によるAAF戯曲賞受賞作", href: "/book" },
+            const linksMap: Record<string, { text: string; href: string; external?: boolean }[]> = {
+              slopes: [
+                { text: "簡易××式骨声霊承のRVCモデル学習", href: "https://ymy6jnbuwsj7.blog.fc2.com/blog-entry-15.html", external: true },
+                { text: "音声・からだ・モジューレーション", href: "https://www.waseda.jp/culture/dramakan/news/9240", external: true },
+              ],
+              tezuka: [{ text: "羽鳥ヨダ嘉郎「同伴（戯曲）」", href: "/book" }],
+              hosoma: [{ text: "羽鳥ヨダ嘉郎によるAAF戯曲賞受賞作", href: "/book" }],
             };
-            const link = linkMap[p.id];
-            if (!link) return p.description;
-            return p.description.split(link.text).map((part, i, arr) =>
-              i < arr.length - 1 ? (
-                <span key={i}>
-                  {part}
-                  {link.external ? (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="underline text-black/70 hover:text-black">{link.text}</a>
-                  ) : (
-                    <Link href={link.href} className="underline hover:opacity-60">{link.text}</Link>
-                  )}
-                </span>
-              ) : (
-                <span key={i}>{part}</span>
-              )
-            );
+            const links = linksMap[p.id];
+            if (!links) return p.description;
+            let parts: (string | React.ReactElement)[] = [p.description];
+            links.forEach((link) => {
+              parts = parts.flatMap((part) => {
+                if (typeof part !== "string") return [part];
+                const split = part.split(link.text);
+                if (split.length === 1) return [part];
+                const result: (string | React.ReactElement)[] = [];
+                split.forEach((s, i) => {
+                  if (i > 0) {
+                    result.push(
+                      link.external ? (
+                        <a key={`${link.text}-${i}`} href={link.href} target="_blank" rel="noopener noreferrer" className="underline text-black/70 hover:text-black">{link.text}</a>
+                      ) : (
+                        <Link key={`${link.text}-${i}`} href={link.href} className="underline hover:opacity-60">{link.text}</Link>
+                      )
+                    );
+                  }
+                  result.push(s);
+                });
+                return result;
+              });
+            });
+            return parts;
           })()}
         </p>
       </div>
