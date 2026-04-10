@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "フェスティバルご理解ありがとうございます",
   description:
     "2026年6月2日〜8日、早稲田エリアで開催される上演芸術のフェスティバル",
+  metadataBase: new URL("https://fesgori.inunosenakaza.com"),
   verification: {
     google: "0mRrMXbTd_B9NNtVGeWVySDa4xZlSgu4eVwH6YyURx0",
   },
