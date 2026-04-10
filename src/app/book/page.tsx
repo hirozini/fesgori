@@ -70,7 +70,7 @@ export default function BookPage() {
           </p>
           <p>
             <a
-              href="https://inunosenakaza.stores.jp/"
+              href="https://inunosenakaza.stores.jp/items/69d75cf18fb59e295885550c"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-emerald-700 text-white px-6 py-2 text-base font-bold rounded hover:opacity-80 transition-opacity"
@@ -194,7 +194,7 @@ export default function BookPage() {
 
             <p>
               <a
-                href="https://inunosenakaza.stores.jp/"
+                href="https://inunosenakaza.stores.jp/items/69d75f2abe5fcd3b1b83a70e"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-emerald-700 text-white px-6 py-2 text-base font-bold rounded hover:opacity-80 transition-opacity"
