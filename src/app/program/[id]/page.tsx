@@ -44,7 +44,7 @@ const ogExtension: Record<string, string> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const p = performances.find((p) => p.id === id);
-  const ogImage = `/images/og/${id}.${ogExtension[id] || "jpg"}`;
+  const ogImage = `https://fesgori.inunosenakaza.com/images/og/${id}.${ogExtension[id] || "jpg"}`;
   return {
     title: p
       ? `${p.title} — フェスティバルご理解ありがとうございます`
